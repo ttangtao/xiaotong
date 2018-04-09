@@ -1,0 +1,42 @@
+<!--pages/my/my.wxml-->
+<!-- //头部卡片 -->
+<view class='my_head'>
+  <view class='head_top'>
+    <text>xxxx团队</text>
+    <view class='code'>
+      <image src='../img/code.png'></image>
+    </view>
+  </view>
+  <view class='head_middle'>
+    <view class='headPic'>
+      <image src='../img/head.png'></image>
+    </view>
+    <view>
+      <text>姓名</text>
+    </view>
+    <view class='edit'>
+      <view>
+        <text>编辑资料</text>
+      </view>
+      <view class='right'>
+        <image src='../img/right.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--功能条  -->
+<view class='Feature'>
+  <view wx:for="{{renderList}}" wx:key="{{index}}" class='row'>
+    <view class='left'>
+      <view class='icon'>
+        <image src='{{item.src}}'></image>
+      </view>
+      <view class='text'>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+    <view class='right'>
+      <image src='../img/right.png'></image>
+    </view>
+  </view>
+</view>

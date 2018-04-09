@@ -1,0 +1,74 @@
+/* pages/my/my.wxss */
+
+.my_head {
+  background-color: #fff;
+  margin: 20rpx;
+  padding: 20rpx;
+}
+
+.head_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.code {
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+
+.headPic {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.head_middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+  color: #777;
+  font-size: 30rpx;
+  text-decoration: underline;
+}
+
+.right {
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  background: #fff;
+  /* margin:20rpx 0; */
+  border-bottom: 1rpx solid #ccc;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.Feature{
+  margin: 20rpx;
+}
+.text{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #777;
+}

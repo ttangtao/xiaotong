@@ -1,0 +1,169 @@
+<!--pages/home/home.wxml-->
+
+<!-- //头部 -->
+<view class='head'>
+
+  <!-- //左边 -->
+  <view class='head_left'>
+    <view class='people_fill'>
+      <image src='../img/people_fill.png'></image>
+    </view>
+    <view>
+      <text>下午好,</text>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <!-- //右边 -->
+  <view class='head_right'>
+    <view>
+      <text>{{time}}</text>
+    </view>
+    <view>
+      <text>{{week}}</text>
+    </view>
+  </view>
+
+</view>
+
+<!-- //通告 -->
+<view class='box'>
+  <view class='box_top'>
+    <view class='b_top_left'>
+      <view class='icon'>
+        <image src='../img/announcement.png'></image>
+      </view>
+      <view>
+        <text>公告通知</text>
+      </view>
+    </view>
+    <view class='allBtn'>
+      <text>全部</text>
+    </view>
+  </view>
+  <view class='box_bottom'>
+    <view class='b_bottom_top'>
+      <view class='icon'>
+        <image src='../img/mail.png'></image>
+      </view>
+      <view class='b_title'>
+        <text>关于清明节的放假通知</text>
+      </view>
+    </view>
+    <view class='b_bottom_bottom'>
+      <text>这里是放假的具体通知</text>
+    </view>
+  </view>
+</view>
+
+<!-- //工作 -->
+<view class='box'>
+  <view class='box_top'>
+    <view class='b_top_left'>
+      <view class='icon'>
+        <image src='../img/createtask_fill.png'></image>
+      </view>
+      <view>
+        <text>代办工作</text>
+      </view>
+    </view>
+    <view class='allBtn'>
+      <text>全部</text>
+    </view>
+  </view>
+  <view class='box_bottom'>
+    <view class='b_bottom_top'>
+      <view class='icon'>
+        <image src='../img/brush_fill.png'></image>
+      </view>
+      <view class='b_title'>
+        <text>产值填报</text>
+      </view>
+    </view>
+    <view class='b_bottom_bottom'>
+      <text>中国移动终端优化</text>
+    </view>
+  </view>
+</view>
+
+<!-- //申请 -->
+<view class='box'>
+  <view class='box_top'>
+    <view class='b_top_left'>
+      <view class='icon'>
+        <image src='../img/baoxiao.png'></image>
+      </view>
+      <view>
+        <text>我的申请</text>
+      </view>
+    </view>
+    <view class='allBtn'>
+      <text>全部</text>
+    </view>
+  </view>
+  <view class='box_bottom'>
+    <view class='b_bottom_top'>
+      <view class='icon'>
+        <image src='../img/gold.png'></image>
+      </view>
+      <view class='b_title'>
+        <text>报销申请</text>
+      </view>
+    </view>
+    <view class='b_bottom_bottom'>
+      <text>伙食费20000</text>
+    </view>
+  </view>
+</view>
+
+<!--上下班  -->
+<view class='work'>
+  <!--上班  -->
+  <view class='work_all'>
+    <view class='w_left'>
+      <text>上班</text>
+    </view>
+    <view class='w_right'>
+      <view class='w_right_top'>
+        <view class='icon2'>
+          <image src='../img/time_fill.png'></image>
+        </view>
+        <view>
+          <text>08:30</text>
+        </view>
+      </view>
+      <view class='w_right_bottom'>
+        <view class='icon2'>
+          <image src='../img/coordinates_fill.png'></image>
+        </view>
+        <view>
+          <text>成都市高新区复城国际T4</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--下班  -->
+  <view class='work_all'>
+    <view style='background:#823935' class='w_left'>
+      <text>下班</text>
+    </view>
+    <view class='w_right'>
+      <view class='w_right_top'>
+        <view class='icon2'>
+          <image src='../img/time_fill.png'></image>
+        </view>
+        <view>
+          <text>08:30</text>
+        </view>
+      </view>
+      <view class='w_right_bottom'>
+        <view class='icon2'>
+          <image src='../img/coordinates_fill.png'></image>
+        </view>
+        <view>
+          <text>成都市高新区复城国际T4</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

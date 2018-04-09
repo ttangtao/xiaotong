@@ -1,0 +1,19 @@
+<!--pages/QrCode/QrCode.wxml-->
+<view>
+  <button style='border-radius:10rpx;margin-top:200px;width:80%' type="primary" bindtap="primary"> 扫码加入我们 </button>
+</view>
+
+<view class='info'>
+  <view class='pic'>
+    <image src='../img/tong.png'></image>
+  </view>
+  <view class=''>
+    <view>
+      <text class='font1'>小通管家</text>
+    </view>
+    <view style='text-align: center'>
+      <text class='font2'>智能化办公平台</text>
+    </view>
+  </view>
+
+</view>

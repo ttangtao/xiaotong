@@ -1,0 +1,36 @@
+<!--pages/identify/identify.wxml-->
+<view class='bj'>
+  <view class='ide_box'>
+
+  </view>
+</view>
+
+<view class='upload'>
+  <view class='ide_icon'>
+    <image src='../img/upload.png'></image>
+  </view>
+  <view class='ide_text'>
+    <text>上传图片</text>
+  </view>
+</view>
+
+<view class='result'>
+  <view class='xing'>
+    <image src='../img/start2.png'></image>
+  </view>
+  <view class='res_text'>
+    <text>识别结果</text>
+  </view>
+</view>
+
+<!--表单  -->
+<view>
+  <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+    <text>{{item.key}}</text>
+    <text>{{item.value}}</text>
+  </view>
+</view>
+
+<view>
+  <button bindtap='saveBtn' class='ptButton otherButtonCls' hover-class="ptButtonHover">保存</button>
+</view>

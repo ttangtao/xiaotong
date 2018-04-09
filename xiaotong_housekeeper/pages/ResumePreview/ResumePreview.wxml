@@ -1,0 +1,42 @@
+<!--pages/ResumePreview/ResumePreview.wxml-->
+
+
+<view class='bigBox'>
+  <view class='Res_pre_head'>
+    <view class='headPic'>
+      <image></image>
+    </view>
+    <view class='head_Info'>
+      <view class='res_pre_title'>
+        <text>唐涛</text>
+      </view>
+      <view class='res_pre_info'>
+        <view style='width:100rpx;'>
+          <text>性别:</text>
+          <text>男</text>
+        </view>
+        <view class='res_pre_border'>
+          <text>最高学历:</text>
+          <text>本科</text>
+        </view>
+      </view>
+      <view class='res_pre_info'>
+        <view style='width:100rpx;'>
+          <text>年龄:</text>
+          <text>24</text>
+        </view>
+        <view class='res_pre_border'>
+          <text>工作年限:</text>
+          <text>3年</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 基本信息 -->
+  <view>
+    <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+      <text>{{item.key}}</text>
+      <text>{{item.value}}</text>
+    </view>
+  </view>
+</view>

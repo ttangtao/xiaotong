@@ -1,0 +1,143 @@
+<!-- //头部 -->
+<view class='head'>
+
+  <!-- //左边 -->
+  <view class='head_left'>
+    <view class='people_fill'>
+      <image src='../img/people_fill.png'></image>
+    </view>
+    <view>
+      <text>下午好,</text>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <!-- //右边 -->
+  <view class='head_right'>
+    <view>
+      <text>{{time}}</text>
+    </view>
+    <view>
+      <text>{{week}}</text>
+    </view>
+  </view>
+
+</view>
+
+
+
+<view class='prompt'>
+  <text>距离发工资还有</text>
+  <text class="prompt_num">3</text>
+  <text>天</text>
+</view>
+
+<!--公司管理 -->
+<view class='qz_box'>
+  <view class='qz_title'>
+    <text>公司管理</text>
+  </view>
+  <view class='qz_b_box'>
+    <view class='qz_f_box' wx:key="{{index}}"  wx:for="{{companyLeaderList}}">
+      <view class='qz_box_container'>
+        <image src='{{item.src}}'></image>
+      </view>
+      <view class="qz_box_text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--财务管理 -->
+<view class='qz_box'>
+  <view class='qz_title'>
+    <text>财务管理</text>
+  </view>
+  <view class='qz_b_box'>
+    <view class='qz_f_box' wx:key="{{index}}"  wx:for="{{financialList}}">
+      <view class='qz_box_container'>
+        <image src='{{item.src}}'></image>
+      </view>
+      <view class="qz_box_text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--人事管理 -->
+<view class='qz_box'>
+  <view class='qz_title'>
+    <text>人事管理</text>
+  </view>
+  <view class='qz_b_box'>
+    <view class='qz_f_box' wx:key="{{index}}"  wx:for="{{personneList}}">
+      <view class='qz_box_container'>
+        <image src='{{item.src}}'></image>
+      </view>
+      <view class="qz_box_text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--项目经理  -->
+<view class='qz_box'>
+  <view class='qz_title'>
+    <text>项目管理</text>
+  </view>
+  <view class='qz_b_box'>
+    <view class='qz_f_box' wx:key="{{index}}"  wx:for="{{projectList}}">
+      <view class='qz_box_container'>
+        <image src='{{item.src}}'></image>
+      </view>
+      <view class="qz_box_text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- //移动办公 -->
+<view class='qz_box'>
+  <view class='qz_title'>
+    <text>移动办公</text>
+  </view>
+  <view class='qz_b_box'>
+    <view class='qz_f_box' wx:key="{{index}}"  wx:for="{{MobileOffice}}">
+      <view class='qz_box_container'>
+        <image src='{{item.src}}'></image>
+      </view>
+      <view class="qz_box_text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--条状区域公共css  -->
+<view>
+  <view class='qz_title'>
+    <text>我的项目</text>
+  </view>
+  <view wx:for="{{5}}" wx:key="{{index}}" class='pro_contanier'>
+    <view class='image_cls'>
+      <image src='../img/project.png'></image>
+    </view>
+    <view class='pro_text'>
+      <view class='text_row1'>
+        <text>XX移动公司2018年日常优化</text>
+      </view>
+      <view class='text_row2'>
+        <text>Xx公司</text>
+        <text>XX省xx市</text>
+      </view>
+    </view>
+    <view class='right_cls'>
+      <image src='../img/right.png'></image>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,55 @@
+/* pages/Project_ex/Project_ex.wxss */
+
+.xing {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.pro_ex_head {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.pro_ex_text {
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  color: #83AF9B;
+}
+.pro_ex_icon{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 0 20rpx;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  border: 1rpx solid #ccc;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+.pro_ex_icons{
+  display: flex;
+  align-items: center;
+}
+.row_text{
+  font-size: 32rpx;
+  padding: 0 20rpx;
+}
+.row_text>view:first-child{
+  font-weight: bold;
+}
+.newProEx{
+  border: none;
+  border-radius: 0;
+}
+.otherButtonCls{
+  /* border-radius: 0; */
+  width: 55%;
+}

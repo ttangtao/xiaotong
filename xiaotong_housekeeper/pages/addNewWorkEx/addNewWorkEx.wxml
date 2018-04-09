@@ -1,0 +1,47 @@
+<!--pages/addNewProEx/addNewProEx.wxml-->
+<view class='add_pro_name'>
+  <text>项目名称</text>
+  <text>{{componyName}}</text>
+</view>
+<!--picker  -->
+<view class='sec_picker'>
+  <view class="section">
+    <view class="section__title">开始日期</view>
+    <picker data-type='begin' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{beginDate}}">
+      <view class="picker">
+        <view>
+          <text>{{beginDate}}</text>
+        </view>
+        <view class='bottom'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class="section">
+  <view class="section__title">结束日期</view>
+  <picker data-type='end' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{endDate}}">
+    <view class="picker">
+      <view>
+        <text>{{endDate}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+</view>
+
+
+<view class='responsibilities'>
+  <text>项目职责:</text>
+</view>
+<view class="textarea">
+  <textarea bindinput='responsibilitiesBtn' placeholder='描述你的项目职责:' value="{{responsibilities}}" />
+</view>
+<view style='height:150rpx'></view>
+<view>
+  <button bindtap='saveBtn' class='button' hover-class="button-hover">保存</button>
+</view>

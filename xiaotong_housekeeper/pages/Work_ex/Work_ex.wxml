@@ -1,0 +1,45 @@
+<!--pages/Project_ex/Project_ex.wxml-->
+<view class='pro_ex_head'>
+  <view class='xing'>
+    <image src='../img/start2.png'></image>
+  </view>
+  <view class='pro_ex_text'>
+    <text>工作经历</text>
+  </view>
+</view>
+
+<view wx:for="{{5}}" wx:key="{{index}}" class='row'>
+  <view class='row_text'>
+    <view>
+      <text>2017年1月1号到2017年12月12日</text>
+    </view>
+    <view>
+      <text>广州移动日常优化</text>
+    </view>
+    <view>
+      <text>后台分析工程师</text>
+    </view>
+  </view>
+  <view class='pro_ex_icons'>
+    <view class='pro_ex_icon'>
+      <image src='../img/edit.png'></image>
+    </view>
+    <view class='pro_ex_icon'>
+      <image src='../img/del.png'></image>
+    </view>
+  </view>
+</view>
+
+<view>
+  <button bindtap='addProBtn' class='newProEx'>新增工作经历</button>
+</view>
+
+<view class='operation'>
+  <view>
+    <button bindtap='preBtn' class='pre'>上一步</button>
+  </view>
+  <view>
+    <button bindtap='nextBtn' class='next'>下一步</button>
+  </view>
+</view>
+<view style='height:200rpx;'></view>

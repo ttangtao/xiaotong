@@ -1,0 +1,68 @@
+/* pages/addNewProEx/addNewProEx.wxss */
+/* //下拉框选择 */
+.bottom{
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.sec_picker{
+  margin: 20rpx 0;
+}
+.section{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  align-items: center;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.picker{
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+.add_pro_name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20rpx;
+  font-size: 32rpx;
+  margin: 20rpx 0;
+}
+.responsibilities{
+  background: #fff;
+  padding: 20rpx;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+.textarea{
+  margin: 20rpx 0;
+  background: #fff;
+  border: 1rpx solid #ccc;
+  border-right-width: 0;
+  border-left-width: 0;
+  text-indent: 40rpx;
+  font-size: 30rpx;
+  color: #777;
+}
+
+
+/** 修改button默认的点击态样式类**/
+
+.button {
+  background-color: #71afa4;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.button-hover {
+  background-color: #269d80;
+}

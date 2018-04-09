@@ -1,0 +1,106 @@
+<!--pages/pre_info_sheet/pre_info_sheet.wxml-->
+<!--个人信息表  -->
+<view class='p_i_head'>
+  <view class='p_left'>
+    <view class='xing'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='p_text'>
+      <text>基本信息</text>
+    </view>
+  </view>
+  <view>
+    <button bindtap='identifyEvent' class='ptButton' hover-class="ptButtonHover">识别身份证,自动填写信息</button>
+  </view>
+</view>
+
+<!--表单  -->
+<view>
+  <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+    <text>{{item.key}}</text>
+    <text>{{item.value}}</text>
+  </view>
+</view>
+
+<!--身高体重  -->
+<view>
+  <view class='row'>
+    <view>
+      <text>身高(cm)</text>
+    </view>
+    <view class='pre_input'>
+      <input data-type='height' bindinput="inputEvent">{{height}}</input>
+    </view>
+  </view>
+
+  <view class='row'>
+    <view>
+      <text>体重(kg)</text>
+    </view>
+    <view class='pre_input'>
+      <input data-type='weight' bindinput="inputEvent">{{weight}}</input>
+    </view>
+  </view>
+</view>
+
+<!--picker  -->
+<view class='sec_picker'>
+  <view class="section">
+    <view class="section__title">政治面貌</view>
+    <picker bindchange="bindPickerChange_Political" value="{{PoliticalIndex}}" range="{{PoliticalArray}}">
+      <view class="picker">
+        <view>
+          <text>{{Political}}</text>
+        </view>
+        <view class='bottom'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+
+  <view class="section">
+    <view class="section__title">婚姻状况</view>
+    <picker bindchange="bindPickerChange_marriage" value="{{marriageIndex}}" range="{{marriageArray}}">
+      <view class="picker">
+        <view>
+          <text>{{marriage}}</text>
+        </view>
+        <view class='bottom'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<!--联系方式  -->
+<view>
+  <view class='lianxi'>
+    <view class='xing'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='title'>
+      <text>联系方式</text>
+    </view>
+  </view>
+  <view>
+    <view class='row'>
+      <text>电话号码</text>
+      <text>15298068626</text>
+    </view>
+    <view class='row'>
+      <text>电子邮箱</text>
+      <text>472625987@qq.com</text>
+    </view>
+  </view>
+</view>
+<view class='operation'>
+  <view>
+    <button class='pre' hover-class='preHover'>上一步</button>
+  </view>
+  <view>
+    <button bindtap='nextBtn' class='next' hover-class='nextHover'>下一步</button>
+  </view>
+</view>
+<view style='height:200rpx;'></view>
