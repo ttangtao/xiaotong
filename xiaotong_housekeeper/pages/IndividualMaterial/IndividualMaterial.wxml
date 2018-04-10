@@ -1,0 +1,46 @@
+<!--pages/IndividualMaterial/IndividualMaterial.wxml-->
+<view>
+  <view class='Er_title'>
+    <view class='Er_title_icon'>
+      <image src='../img/start2.png'></image>
+    </view>
+    <view class='Er_title_text'>
+      <text>个人材料</text>
+    </view>
+  </view>
+</view>
+
+<view>
+  <view class='indMater_row' wx:key="{{index}}" wx:for="{{fillList}}">
+    <view bindtap='showPreview' id='{{item.id}}' class='indMater_row_info'>
+      <view class='indMater_row_info_text'>
+        <text>{{item.title}}</text>
+      </view>
+      <view catchtap='uploadPic' class='indMater_row_info_btn'>
+        <image src='{{item.src}}'></image>
+      </view>
+    </view>
+    <!--预览  -->
+    <view wx:if="{{item.isShow}}">
+      <view wx:if="{{item.previewSrc}}" class='previewCls'>
+        <image src='{{item.previewSrc}}'></image>
+      </view>
+      <view wx:else class='preview_no'>
+        <text>暂无</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='otherZJ'>
+  <button bindtap='addOtherZJ' class='ptButton otherButtonCls' hover-class='ptButtonHover'>新增其他证件</button>
+</view>
+<view class='operation'>
+  <view>
+    <button bindtap='preBtn' class='pre' hover-class='perHover'>上一步</button>
+  </view>
+  <view>
+    <button bindtap='nextBtn' class='next' hover-class='nextHover'>下一步 </button>
+  </view>
+</view>
+<view style='height:200rpx;'></view>

@@ -1,0 +1,23 @@
+<!--pages/OtherCertificates/OtherCertificates.wxml-->
+<view>
+  <view class='Er_title'>
+    <view class='Er_title_icon'>
+      <image src='../img/start2.png'></image>
+    </view>
+    <view class='Er_title_text'>
+      <text>其他证件</text>
+    </view>
+  </view>
+</view>
+<view class='zjName'>
+  <text>证件名称</text>
+  <input class='zjname_input'></input>
+</view>
+<view>
+  <button bindtap='otherUpload' class='ptButton otherButtonCls' hover-class='ptButtonHover'>上传图片</button>
+</view>
+
+<view style='height:150rpx'></view>
+<view>
+  <button bindtap='saveBtn' class='saveButton otherButtonClsBtn' hover-class="ptButtonHover">保存</button>
+</view>

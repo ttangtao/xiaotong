@@ -39,4 +39,54 @@
       <text>{{item.value}}</text>
     </view>
   </view>
+  <!--项目经历  -->
+  <view class='proL_title'>
+    <text>项目经历</text>
+  </view>
+  <view wx:for="{{4}}" wx:key="{{index}}" class='rp_projectList'>
+    <view class='rp_pl_top'>
+      <view class='pl_left'>
+        <text>2017年1月1日</text>
+        <text>到</text>
+        <text>2018年1月1日</text>
+      </view>
+      <view class='pl_right'>
+        <text>XX省XX市</text>
+      </view>
+    </view>
+    <view class='rp_pl_row'>
+      <view class='rp_pl_sRow'>
+        <text>广州移动优化</text>
+      </view>
+      <view class='rp_pl_sRow rp_pl_sRow_border'>
+        <text>后台分析工程师</text>
+      </view>
+    </view>
+    <view class='rp_pl_row'>
+      <view class='rp_pl_sRow'>
+        <text>移动</text>
+      </view>
+      <view class='rp_pl_sRow'>
+        <text>华为</text>
+      </view>
+      <view class='rp_pl_sRow rp_pl_sRow_border'>
+        <text>TD-LTE</text>
+      </view>
+    </view>
+    <view class='rp_responsibilities'>
+      <text class='rp_responsibilities_title'>项目职责:</text>
+      <text class='rp_responsibilities_text'>这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容这里是职责内容</text>
+    </view>
+  </view>
 </view>
+
+
+<view class='operation'>
+  <view>
+    <button bindtap='preBtn' class='pre' hover-class='perHover'>上一步</button>
+  </view>
+  <view>
+    <button bindtap='nextBtn' class='next' hover-class='nextHover'>提交</button>
+  </view>
+</view>
+<view style='height:200rpx;'></view>

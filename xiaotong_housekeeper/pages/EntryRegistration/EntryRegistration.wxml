@@ -1,0 +1,94 @@
+<!--pages/EntryRegistration/EntryRegistration.wxml-->
+<view>
+  <view class='Er_title'>
+    <view class='Er_title_icon'>
+      <image src='../img/start2.png'></image>
+    </view>
+    <view class='Er_title_text'>
+      <text>银行卡信息</text>
+    </view>
+  </view>
+</view>
+
+<!--开户行  -->
+<view class="section">
+  <view class="section__title">开户行</view>
+  <picker data-type='openAccount' bindchange="bindPickerChange" value="{{openAccountIndex}}" range="{{openAccountArray}}">
+    <view class="picker">
+      <view>
+        <text>{{openAccount}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+</view>
+
+<!--开户地  -->
+<view class="section">
+  <view class="section__title">开户地</view>
+  <picker data-type='openAccountSite' bindchange="bindPickerChange" value="{{openAccountSiteIndex}}" range="{{openAccountSiteArray}}">
+    <view class="picker">
+      <view>
+        <text>{{openAccountSite}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+</view>
+<!--银行账号  -->
+<view class='add_pro_name'>
+  <text>银行账号</text>
+  <input style='text-align:right;border:1rpx solid #ccc;' type='number' value='{{bankAccount}}'></input>
+</view>
+
+
+<view>
+  <view class='Er_title'>
+    <view class='Er_title_icon'>
+      <image src='../img/start2.png'></image>
+    </view>
+    <view class='Er_title_text'>
+      <text>紧急联系人</text>
+    </view>
+  </view>
+</view>
+
+<!--紧急联系人姓名  -->
+<view class='add_pro_name'>
+  <text>紧急联系人姓名</text>
+  <input style='text-align:right;border:1rpx solid #ccc;' value='{{contactName}}'></input>
+</view>
+
+<!--紧急联系人电话  -->
+<view class='add_pro_name'>
+  <text>紧急联系人电话</text>
+  <input style='text-align:right;border:1rpx solid #ccc;' type='number' value='{{contactTel}}'></input>
+</view>
+
+<!--紧急联系人姓名  -->
+<view class="section">
+  <view class="section__title">紧急联系人关系</view>
+  <picker data-type='EmergencyContact' bindchange="bindPickerChange" value="{{EmergencyContactIndex}}" range="{{EmergencyContactArray}}">
+    <view class="picker">
+      <view>
+        <text>{{EmergencyContact}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+</view>
+<view class='operation'>
+  <view>
+    <button bindtap='preBtn' class='pre' hover-class='perHover'>上一步</button>
+  </view>
+  <view>
+    <button bindtap='nextBtn' class='next' hover-class='nextHover'>下一步 </button>
+  </view>
+</view>
+<view style='height:200rpx;'></view>

@@ -1,0 +1,46 @@
+/* pages/IndividualMaterial/IndividualMaterial.wxss */
+.Er_title{
+  display: flex;
+  align-items: center;
+  padding: 10rpx 20rpx;
+}
+.Er_title_icon{
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.Er_title_text{
+  margin-left: 20rpx;
+  color: #83AF9B;
+}
+
+.indMater_row_info{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 32rpx;
+}
+.indMater_row_info_btn{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.previewCls{
+  margin: 20rpx 40rpx;
+  border: 1rpx solid #ccc;
+  background: #fff;
+  height: 400rpx;
+}
+.preview_no{
+  text-align: center;
+  margin: 20rpx 0;
+}
+.otherButtonCls{
+  width: 55%;
+  /* border-radius: 0; */
+}
+.otherZJ{
+  margin: 20rpx 0;
+}

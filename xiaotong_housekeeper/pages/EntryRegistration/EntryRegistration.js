@@ -1,18 +1,37 @@
-// pages/ResumePreview/ResumePreview.js
+// pages/EntryRegistration/EntryRegistration.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    testData: [
-      { key: '姓名', value: '唐涛' },
-      { key: '性别', value: '男' },
-      { key: '证件号码', value: '510107199408293435' },
-      { key: '出生日期', value: '19940829' },
-      { key: '名族', value: '汉' },
-      { key: '居住地', value: '四川省成都市武侯区武兴街2号团结社区' }
-    ],
+    //开户行
+    openAccountIndex: 0,
+    openAccountArray: ['中国银行', '成都银行'],
+    openAccount: '请选择',
+    //开户地
+    openAccountSiteIndex: 0,
+    openAccountSiteArray: ['地点1', '地点2'],
+    openAccountSite: '请选择',
+    //联系人关系
+    EmergencyContactIndex: 0,
+    EmergencyContactArray: ['关系1', '关系2'],
+    EmergencyContact: '请选择',
+  },
+  bindPickerChange(e) {
+    let kind = e.target.dataset.type;
+    let value = e.detail.value;
+    switch (kind) {
+      case 'openAccount':
+        this.setData({ openAccount: this.data.openAccountArray[value] })
+        break;
+      case 'EmergencyContact':
+        this.setData({ EmergencyContact: this.data.EmergencyContactArray[value] })
+        break;
+      default:
+        break;
+    }
+    console.log(kind, value)
   },
   //上一步
   preBtn() {

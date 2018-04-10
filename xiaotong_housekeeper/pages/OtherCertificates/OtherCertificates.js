@@ -1,36 +1,36 @@
-// pages/ResumePreview/ResumePreview.js
+// pages/OtherCertificates/OtherCertificates.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    testData: [
-      { key: '姓名', value: '唐涛' },
-      { key: '性别', value: '男' },
-      { key: '证件号码', value: '510107199408293435' },
-      { key: '出生日期', value: '19940829' },
-      { key: '名族', value: '汉' },
-      { key: '居住地', value: '四川省成都市武侯区武兴街2号团结社区' }
-    ],
+
   },
-  //上一步
-  preBtn() {
-    wx.navigateBack({
-      delta: 1
-    })
-  },
-  nextBtn() {
-    //提交
-    wx.navigateTo({
-      // url: '../Education_ex/Education_ex',
+  otherUpload() {
+    wx.chooseImage({
+      success: function (res) {
+        var tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: '', 
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            'user': 'test'
+          },
+          success: function (res) {
+            var data = res.data
+            //do something
+          }
+        })
+      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(new Date())
   },
 
   /**

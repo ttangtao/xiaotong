@@ -1,40 +1,48 @@
 /* pages/ResumePreview/ResumePreview.wxss */
-.bigBox{
+
+.bigBox {
   margin: 20rpx;
   padding: 20rpx;
   background-color: #fff;
   border: 1rpx solid #ccc;
 }
-.Res_pre_head{
+
+.Res_pre_head {
   display: flex;
   justify-content: space-between;
-  padding:20rpx;
-  align-items:center;
+  padding: 20rpx;
+  align-items: center;
 }
-.headPic{
+
+.headPic {
   width: 160rpx;
   height: 160rpx;
   border-radius: 20rpx;
   background: steelblue;
 }
-.head_Info{
+
+.head_Info {
   flex-grow: 1;
   margin-left: 40rpx;
 }
-.res_pre_info{
+
+.res_pre_info {
   font-size: 28rpx;
   color: #777;
   margin: 10rpx 0;
   display: flex;
 }
-.res_pre_title{
+
+.res_pre_title {
   font-size: 38rpx;
 }
-.res_pre_border{
+
+.res_pre_border {
   margin-left: 20rpx;
   padding-left: 20rpx;
   border-left: 1rpx solid #ccc;
 }
+
 .row {
   display: flex;
   background: #fff;
@@ -44,4 +52,62 @@
   color: #333;
   font-size: 32rpx;
   border-bottom: 1rpx solid #ccc;
+}
+
+.row>text:last-child {
+  font-size: 28rpx;
+}
+
+.rp_projectList {
+  margin: 20rpx 0;
+  padding: 0 15rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.proL_title {
+  color: steelblue;
+  margin: 10rpx 0;
+  text-decoration: underline;
+}
+
+.rp_pl_top {
+  display: flex;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.pl_left {
+  border-right: 1rpx solid #ccc;
+  padding-right: 20rpx;
+}
+
+.pl_right {
+  flex-grow: 1;
+  padding-left: 20rpx;
+}
+.rp_pl_row{
+  display: flex;
+  margin: 10rpx 0;
+}
+.rp_pl_sRow{
+  display: inline-block;
+  margin: 0 15rpx;
+  font-size: 28rpx;
+  border-right: 1rpx solid #ccc;
+  padding-right: 25rpx;
+}
+.rp_pl_sRow_border{
+  border: none;
+}
+.rp_responsibilities{
+  font-size: 28rpx;
+  margin: 10rpx 0;
+  padding: 0 10rpx;
+}
+.rp_responsibilities_title{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.rp_responsibilities_text{
+  margin-left: 15rpx;
 }

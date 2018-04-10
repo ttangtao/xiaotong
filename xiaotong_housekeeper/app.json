@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/OtherCertificates/OtherCertificates",
+    "pages/home/home",
+    "pages/IndividualMaterial/IndividualMaterial",
+    "pages/EntryRegistration/EntryRegistration",
     "pages/ResumePreview/ResumePreview",
     "pages/pre_info_sheet/pre_info_sheet",
     "pages/my/my",
@@ -13,7 +17,6 @@
     "pages/identify/identify",
     "pages/addNewProEx/addNewProEx",
     "pages/workbench/workbench",
-    "pages/home/home",
     "pages/QrCode/QrCode"
   ],
   "window": {

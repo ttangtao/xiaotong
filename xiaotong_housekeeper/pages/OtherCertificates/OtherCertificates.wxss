@@ -1,0 +1,45 @@
+/* pages/OtherCertificates/OtherCertificates.wxss */
+.Er_title{
+  display: flex;
+  align-items: center;
+  padding: 10rpx 20rpx;
+}
+.Er_title_icon{
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.Er_title_text{
+  margin-left: 20rpx;
+  color: #83AF9B;
+}
+.zjName{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #fff;
+  border: 1rpx solid #ccc;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+.zjname_input{
+  border: 1rpx solid #ccc;
+  font-size: 28rpx;
+  color: #777;
+  text-align: right;
+}
+.otherButtonCls{
+  width: 55%;
+  margin: 20rpx auto;
+  /* border-radius: 0; */
+}
+.saveButton{
+  background: #751B13;
+  color: #fff;
+}
+.otherButtonClsBtn {
+  border-radius: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

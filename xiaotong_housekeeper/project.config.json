@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
-	"appid": "wxa972e00c27d77e87",
+  "appid": "wxa972e00c27d77e87",
 	"projectname": "xiaotong_housekeeper",
 	"isGameTourist": false,
 	"condition": {
