@@ -1,3 +1,4 @@
+const color1 = '#DE9C53'
 const formatTime = (date = new Date) => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1

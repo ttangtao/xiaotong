@@ -1,42 +1,26 @@
-// pages/OtherCertificates/OtherCertificates.js
+// pages/customerInformation/customerInformation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    fillList: [
+      { key: '公司名称', value: '公司' },
+      { key: '税号', value: '923492849234324' },
+      { key: '营业地址', value: 'xx省xx市xx区xx路xx号' },
+      { key: '固定电话', value: '028-85012334' },
+      { key: '银行账号', value: '中国银行xx分行xx支行' },
+      { key: '开户行', value: '12324234' },
+      {key: '开户地', value: 'xx省xx市'}
+    ]
+  },
 
-  },
-  otherUpload() {
-    wx.chooseImage({
-      success: function (res) {
-        var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: '', 
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
-        })
-      }
-    })
-  },
-  //保存按钮
-  saveBtn(){
-    wx.navigateBack({
-      delta: 1,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(new Date())
+
   },
 
   /**

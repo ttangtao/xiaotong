@@ -1,0 +1,105 @@
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+}  
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+  font-size: 34rpx;
+  border-bottom: 10rpx solid #f5f5f5;
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+  /* margin:0 30rpx; */
+}  
+.navbar .item.active{  
+  color: #CD6A65;  
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 4rpx;  
+  background: #CD6A65;  
+}  
+.proInfo_row{
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+  font-size: 32rpx;
+  color: #333;
+}
+.rightIcon{
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+/*团队模块  */
+.timeMenRow{
+  background-color: #fff;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  /* justify-content: space-between; */
+
+}
+.teamRow_headPic{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: #CD6A65;
+}
+.teamRow_info{
+  margin-left: 20rpx;
+  flex-grow: 1;
+  font-size: 32rpx;
+}
+.teamRow_info_top,.teamRow_info_bottom{
+  margin: 10rpx 0;
+}
+.teamRow_right{
+  width: 35rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+
+/*排行榜  */
+.rankHead{
+  background-color: #fff;
+  margin: 10rpx 0;
+}
+.rankIcon{
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.rankPick{
+  flex-grow: 1;
+  font-size: 32rpx;
+  color: #333;
+  justify-content: space-between;
+  padding: 10rpx;
+  border:1rpx solid #ccc;
+  margin:0 10rpx;
+}
+.rankRow{
+  background: #fff;
+  padding: 20rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+}
+.rankHeadPic{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: steelblue;
+  border-radius: 50%;
+}

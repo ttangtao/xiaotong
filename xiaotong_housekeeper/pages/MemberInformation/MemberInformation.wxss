@@ -1,0 +1,75 @@
+/* pages/MemberInformation/MemberInformation.wxss */
+.Res_pre_head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  align-items: center;
+}
+
+.headPic {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background: steelblue;
+}
+
+.head_Info {
+  flex-grow: 1;
+  margin-left: 40rpx;
+}
+
+.res_pre_info {
+  font-size: 28rpx;
+  color: #777;
+  margin: 10rpx 0;
+  display: flex;
+}
+
+.res_pre_title {
+  font-size: 38rpx;
+}
+
+.res_pre_border {
+  margin-left: 20rpx;
+  padding-left: 20rpx;
+  border-left: 1rpx solid #ccc;
+}
+
+.row {
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  color: #333;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.row>text:last-child {
+  font-size: 28rpx;
+}
+
+.rp_projectList {
+  margin: 20rpx 0;
+  padding: 0 15rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.proL_title {
+  color: steelblue;
+  margin: 10rpx 0;
+  text-decoration: underline;
+}
+.picIcon{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.ts_text{
+  font-size: 32rpx;
+  margin-left: 10rpx;
+}
+.ts_box{
+  padding: 10rpx 20rpx;
+}

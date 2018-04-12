@@ -1,0 +1,70 @@
+/* pages/MyApplication/MyApplication.wxss */
+
+.mapp_head {
+  margin: 20rpx 0;
+  padding: 0 20rpx;
+}
+
+.mapp_icon {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 35rpx;
+}
+
+.mapp_text {
+  margin-left: 10rpx;
+  font-size: 32rpx;
+}
+
+.mapp_textarea {
+  border: 1rpx solid #ccc;
+  padding: 20rpx;
+  background-color: #fff;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.mapp_textarea>textarea {
+  width: 100%;
+  font-size: 34rpx;
+  color: #333;
+}
+
+.mapp_pic {
+  padding: 0 20rpx;
+  margin: 20rpx 0;
+}
+
+.appPic {
+  width: 200rpx;
+  height: 200rpx;
+  background: #cd6a65;
+}
+
+.mapp_row {
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+  padding: 10rpx 14rpx;
+}
+
+.mapp_row>view {
+  flex-grow: 1;
+  font-size: 34rpx;
+  margin: 0 4rpx;
+}
+
+.ma_row_pic {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 20%;
+  background: #f3a971;
+  margin-right: 10rpx;
+}
+
+
+.otherButtonCls {
+  border-radius: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

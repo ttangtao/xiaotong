@@ -1,0 +1,151 @@
+<!--pages/askLeave/askLeave.wxml-->
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>项目归属</text>
+    </view>
+  </view>
+  <view class='flex'>
+    <picker data-kind='projectBelongs' bindchange="bindPickerChange" value="{{projectBelongs}}" range="{{projectBelongsAry}}">
+      <view class="picker">
+        {{projectBelongs}}
+      </view>
+    </picker>
+    <view class='fxCls'>
+      <image src='../img/right.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='askTishi flex'>
+  <text>本月已经申请了{{sqDays}}天</text>
+  <text>我的加班</text>
+</view>
+
+<!--picker  -->
+<view class='sec_picker'>
+  <view class="section">
+    <view class="section__title">开始日期</view>
+    <picker mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" data-kind='beginDate' value="{{beginDate}}">
+      <view class="picker flex">
+        <view>
+          <text>{{beginDate}}</text>
+        </view>
+        <view class='fxCls'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+    <picker data-kind='beginType' bindchange="bindPickerChange" value="{{beginType}}" range="{{beginTypeAry}}">
+      <view class="picker flex">
+        <view>
+          <text>{{beginType}}</text>
+        </view>
+        <view class='fxCls'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+
+
+
+  </view>
+  <view class="section">
+    <view class="section__title">结束日期</view>
+    <picker data-kind='endDate' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{endDate}}">
+      <view class="picker flex">
+        <view>
+          <text>{{endDate}}</text>
+        </view>
+        <view class='fxCls'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+    <picker data-kind='endType' bindchange="bindPickerChange" value="{{endType}}" range="{{endTypeAry}}">
+      <view class="picker flex">
+        <view>
+          <text>{{endType}}</text>
+        </view>
+        <view class='fxCls'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>申请天数(天)</text>
+    </view>
+  </view>
+  <view style='font-size:32rpx;color:#555;'>
+    <text>{{jsDays}}天</text>
+  </view>
+</view>
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>补偿方式</text>
+    </view>
+  </view>
+  <view class='flex'>
+    <picker data-kind='CompensationMode' bindchange="bindPickerChange" value="{{CompensationMode}}" range="{{CompensationModeAry}}">
+      <view class="picker">
+        {{CompensationMode}}
+      </view>
+    </picker>
+    <view class='fxCls'>
+      <image src='../img/right.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>事由</text>
+    </view>
+  </view>
+</view>
+
+<view class='reasonBox'>
+  <view class='reason'>
+    <textarea auto-height value='{{reason}}'></textarea>
+  </view>
+</view>
+<view bindtap='uploadPic' class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>图片</text>
+    </view>
+  </view>
+  <view class='fxCls'>
+    <image src='../img/add.png'></image>
+  </view>
+</view>
+
+<view class='uploadPic'><image src='{{uploadSrc}}'></image></view>
+
+<view style='height:150rpx'></view>
+<view>
+  <button bindtap='saveBtn' class='ptButton otherButtonCls' hover-class="ptButtonHover">提交</button>
+</view>

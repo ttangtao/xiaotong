@@ -1,4 +1,9 @@
 /**app.wxss**/
+.flex{
+  display: flex;
+  align-items: center;
+}
+
 text{
   font-family: "consolas"
 }
@@ -10,6 +15,7 @@ page {
   width: 40rpx;
   height: 40rpx;
 }
+
 
 .head {
   display: flex;
@@ -41,10 +47,6 @@ page {
 image {
   width: 100%;
   height: 100%;
-}
-
-text {
-  font-family: "Microsoft YaHei";
 }
 
 /*块状区域  */
@@ -113,10 +115,10 @@ text {
   background: #46DC96;
 }
 .ptButton{
-  background-color: #71AFA4;
+  background-color: #F3A971;
   color: #fff;
   border:none;
 }
 .ptButtonHover {
-  background-color: #269D80;
+  background-color:#DE9C53;
 }

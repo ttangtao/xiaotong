@@ -1,42 +1,26 @@
-// pages/OtherCertificates/OtherCertificates.js
+// pages/MemberInformation/MemberInformation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    testData: [
+      { key: '项目名称', value: '学习项目' },
+      { key: '项目地点', value: 'xx省xx市' },
+      { key: '项目角色', value: '后台分析工程师' },
+      { key: '运营商', value: '移动' },
+      { key: '设备厂家', value: '华为' },
+      { key: '网络类型', value: 'TD-LTE' },
+      { key: '上项目日期', value: '2018年1月1号' }
+    ]
+  },
 
-  },
-  otherUpload() {
-    wx.chooseImage({
-      success: function (res) {
-        var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: '', 
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
-        })
-      }
-    })
-  },
-  //保存按钮
-  saveBtn(){
-    wx.navigateBack({
-      delta: 1,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(new Date())
+
   },
 
   /**

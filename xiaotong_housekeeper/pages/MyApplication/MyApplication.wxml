@@ -1,0 +1,48 @@
+<!--pages/MyApplication/MyApplication.wxml-->
+<view class='mapp_head flex'>
+  <view class='mapp_icon'>
+    <image wx:if="{{approvalOpinions}}" src='../img/start2.png'></image>
+    <image wx:else src='../img/start.png'></image>
+  </view>
+  <view class='mapp_text'>
+    <text>审批意见</text>
+  </view>
+</view>
+
+<view class='mapp_textarea'>
+  <textarea auto-height bindinput='changeTextBtn' value='{{approvalOpinions}}' />
+</view>
+
+<view class='mapp_pic'>
+  <view>
+    <text>图片</text>
+  </view>
+  <view class='appPic'></view>
+</view>
+
+<view>
+
+  <view wx:for="{{5}}" wx:key="{{index}}" class='mapp_row flex'>
+    <view class='ma_row_pic'>
+      <image></image>
+    </view>
+    <view class='ma_row_who'>
+      <text>求职者A</text>
+    </view>
+    <view class='ma_row_send'>
+      <text>发起申请</text>
+    </view>
+    <view class='ma_row_date'>
+      <text>2018-04-12</text>
+    </view>
+    <view class='ma_row_time'>
+      <text>11:40</text>
+    </view>
+  </view>
+
+</view>
+
+<view style='height:150rpx'></view>
+<view>
+  <button bindtap='saveBtn' class='ptButton otherButtonCls' hover-class="ptButtonHover">重新提交入职申请</button>
+</view>

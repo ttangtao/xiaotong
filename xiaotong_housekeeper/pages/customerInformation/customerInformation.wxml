@@ -1,0 +1,7 @@
+<!--pages/customerInformation/customerInformation.wxml-->
+  <view wx:for="{{fillList}}" class='proInfo_row flex'>
+    <text>{{item.key}}</text>
+    <text>{{item.value}}</text>
+  </view>
+
+

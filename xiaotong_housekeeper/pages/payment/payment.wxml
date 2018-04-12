@@ -1,0 +1,170 @@
+<!--pages/payment/payment.wxml-->
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>项目归属</text>
+    </view>
+  </view>
+  <view class='flex'>
+    <picker data-kind='projectBelongs' bindchange="bindPickerChange" value="{{projectBelongs}}" range="{{projectBelongsAry}}">
+      <view class="picker">
+        {{projectBelongs}}
+      </view>
+    </picker>
+    <view class='fxCls'>
+      <image src='../img/right.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='askTishi flex'>
+  <text>本月已申请{{sqDays}}元</text>
+  <text>我的付款</text>
+</view>
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>费用类型</text>
+    </view>
+  </view>
+  <view class='flex'>
+    <picker data-kind='projectBelongs' bindchange="bindPickerChange" value="{{projectBelongs}}" range="{{projectBelongsAry}}">
+      <view class="picker">
+        {{projectBelongs}}
+      </view>
+    </picker>
+    <view class='fxCls'>
+      <image src='../img/right.png'></image>
+    </view>
+  </view>
+</view>
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>费用金额（元）</text>
+    </view>
+  </view>
+  <view class='flex inputCls'>
+      <input></input>
+  </view>
+</view>
+
+<view class='sec_picker'>
+  <view class="section">
+    <view class="section__title">支付日期</view>
+    <picker data-kind='endDate' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{endDate}}">
+      <view class="picker flex">
+        <view>
+          <text>{{endDate}}</text>
+        </view>
+        <view class='fxCls'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+   <view class="section">
+    <view class="section__title">支付对象</view>
+    <picker data-kind='endDate' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{endDate}}">
+      <view class="picker flex">
+        <view>
+          <text>{{endDate}}</text>
+        </view>
+        <view class='fxCls'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>开户行</text>
+    </view>
+  </view>
+  <view class='flex inputCls'>
+      <input></input>
+  </view>
+</view>
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>银行账号</text>
+    </view>
+  </view>
+  <view class='flex inputCls'>
+      <input></input>
+  </view>
+</view>
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>开户地</text>
+    </view>
+  </view>
+  <view class='flex inputCls'>
+      <input></input>
+  </view>
+</view>
+
+
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>事由</text>
+    </view>
+  </view>
+</view>
+
+<view class='reasonBox'>
+  <view class='reason'>
+    <textarea auto-height value='{{reason}}'></textarea>
+  </view>
+</view>
+
+<view bindtap='uploadPic' class='askL_row flex'>
+  <view class='flex'>
+    <view class='fxCls'>
+      <image src='../img/start.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>图片</text>
+    </view>
+  </view>
+  <view class='fxCls'>
+    <image src='../img/add.png'></image>
+  </view>
+</view>
+
+<view class='uploadPic'><image src='{{uploadSrc}}'></image></view>
+
+<view style='height:150rpx'></view>
+<view>
+  <button bindtap='saveBtn' class='ptButton otherButtonCls' hover-class="ptButtonHover">提交</button>
+</view>

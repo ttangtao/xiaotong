@@ -34,7 +34,7 @@
   /* border-radius: 0; */
 }
 .saveButton{
-  background: #751B13;
+  background: #71AFA4;
   color: #fff;
 }
 .otherButtonClsBtn {

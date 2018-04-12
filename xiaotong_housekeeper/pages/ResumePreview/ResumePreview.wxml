@@ -11,7 +11,7 @@
         <text>唐涛</text>
       </view>
       <view class='res_pre_info'>
-        <view style='width:100rpx;'>
+        <view style='width:120rpx;'>
           <text>性别:</text>
           <text>男</text>
         </view>
@@ -21,7 +21,7 @@
         </view>
       </view>
       <view class='res_pre_info'>
-        <view style='width:100rpx;'>
+        <view style='width:120rpx;'>
           <text>年龄:</text>
           <text>24</text>
         </view>
@@ -43,6 +43,7 @@
   <view class='proL_title'>
     <text>项目经历</text>
   </view>
+  
   <view wx:for="{{4}}" wx:key="{{index}}" class='rp_projectList'>
     <view class='rp_pl_top'>
       <view class='pl_left'>

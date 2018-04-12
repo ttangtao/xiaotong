@@ -1,0 +1,12 @@
+/* pages/customerInformation/customerInformation.wxss */
+.proInfo_row{
+  justify-content: space-between;
+  padding: 20rpx;
+  border-top: 1rpx solid #ccc;
+  background: #fff;
+  font-size: 32rpx;
+  color: #333;
+}
+.proInfo_row:last-child{
+  border-bottom: 1rpx solid #ccc;
+}

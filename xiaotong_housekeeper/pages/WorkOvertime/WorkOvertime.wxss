@@ -1,0 +1,28 @@
+/* pages/askLeave/askLeave.wxss */
+@import "../publicCss/mo_publicCss.wxss";
+
+.askTishi{
+  font-size: 32rpx;
+  margin: 20rpx 0 ;
+  padding: 0 20rpx;
+  justify-content: space-between;
+}
+.askTishi>text:first-child{
+  color: #CD6A65
+}
+.askTishi>text:last-child{
+  color: #F3A971
+}
+
+.reasonBox{
+  background: #fff;
+}
+.reason{
+  border: 1rpx solid #ccc;
+  border-left-width: 0;
+  border-right-width: 0;
+  font-size: 32rpx;
+  color: #555;
+  padding: 10rpx;
+  height: 300rpx;
+}

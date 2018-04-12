@@ -1,49 +1,32 @@
-// pages/OtherCertificates/OtherCertificates.js
+// pages/IntegralManagement/IntegralManagement.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    navbar: ['项目信息', '团队成员', '排行榜'],
+    currentTab: 0,
+    rankDate:'请选择',
+    rankTypeAry: ['种类1', '种类2', '种类3'],
+    rankType:'请选择'
   },
-  otherUpload() {
-    wx.chooseImage({
-      success: function (res) {
-        var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: '', 
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
-        })
-      }
+  //切换tab事件
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
     })
   },
-  //保存按钮
-  saveBtn(){
-    wx.navigateBack({
-      delta: 1,
+  gotoInfoBtn(){
+    wx.navigateTo({
+      url: '../customerInformation/customerInformation',
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log(new Date())
-  },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

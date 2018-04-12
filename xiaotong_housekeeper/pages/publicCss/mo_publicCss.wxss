@@ -1,0 +1,73 @@
+.fxCls{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.picker{
+  font-size: 32rpx;
+  color: #555;
+  margin-right: 4rpx;
+}
+.askL_row{
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.row_text{
+  margin-left: 4rpx;
+  color: #555;
+  font-size: 34rpx;
+}
+
+/*pick  */
+.sec_picker{
+  margin: 20rpx 0;
+}
+.section{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  align-items: center;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.picker{
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.otherButtonCls {
+  border-radius: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.ptButton{
+  background-color: #F3A971;
+  color: #fff;
+  border:none;
+}
+
+.ptButtonHover {
+  background-color:#DE9C53;
+}
+
+.uploadPic{
+  margin: 20rpx auto;
+  width: 90%;
+  height: 400rpx;
+  background: #CD6A65
+}
+.inputCls{
+  border: 1rpx solid #ccc;
+  width: 200rpx;
+}
+.inputCls>input{
+  font-size: 32rpx;
+  color: #555;
+  padding: 0 10rpx;
+}
