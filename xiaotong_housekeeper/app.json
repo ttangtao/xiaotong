@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/todoWork/todoWork",
+    "pages/announcement/select/select",
+    "pages/myApply/myApply",
+    "pages/announcement/announcement",
+    "pages/announcement/release/release",
+    "pages/announcement/announcementDetail/announcementDetail",
     "pages/payment/payment",
     "pages/claim/claim",
     "pages/WorkOvertime/WorkOvertime",

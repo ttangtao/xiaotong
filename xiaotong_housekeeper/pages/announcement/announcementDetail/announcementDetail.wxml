@@ -1,0 +1,11 @@
+<!--pages/announcementDetail/announcementDetail.wxml-->
+<view>
+    <view class='top'>
+        <text class='number'>8人已读,20人未读</text>
+    </view>
+    <view class="contentWrap">
+        <text class='title'>{{announcementDetail.title}}</text>            
+        <text class='who_date'>{{announcementDetail.name}} {{announcementDetail.date}}</text>
+        <text>{{announcementDetail.content}}</text>
+    </view>
+</view>

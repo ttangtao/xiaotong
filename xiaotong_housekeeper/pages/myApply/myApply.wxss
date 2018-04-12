@@ -1,0 +1,57 @@
+/* pages/myApply/myApply.wxss */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #ccc;
+}
+.tab {
+  line-height: 100rpx;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.tab2 {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+.todo {
+  width: 40rpx;
+}
+.Intab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.itemWrap {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx 40rpx;
+  border-bottom: 1px solid #ccc;
+  font-size: 30rpx;
+}
+.contentWrap {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.right_todo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.title {
+  font-size: 40rpx;
+}

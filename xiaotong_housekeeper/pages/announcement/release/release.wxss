@@ -1,0 +1,29 @@
+  /* pages/announcement/release/release.wxss  */
+.border {
+  border: 1px solid #ccc;
+  padding:10rpx 14rpx;
+  width: 90%; 
+  margin-bottom: 20rpx;
+}
+.wrap {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: 34rpx;
+  height:40rpx;
+}
+.sendWrap {
+  display: flex;
+  width: 94%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.iconWrap {
+  display: flex;
+  flex-direction:row;
+  align-items: center; 
+}  

@@ -1,0 +1,24 @@
+/* pages/announcementDetail/announcementDetail.wxss */
+.contentWrap {
+    padding: 20rpx 50rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title {
+  font-weight: 600;
+  font-size: 45rpx;
+  margin-bottom: 26rpx;
+}
+.top {
+  text-align: right;
+  font-size: 26rpx;
+  padding-top: 15rpx;
+}
+.number {
+  padding-right: 40rpx;
+  color: #3f51b5;
+}
+.who_date {
+  padding-bottom: 30rpx;
+}
