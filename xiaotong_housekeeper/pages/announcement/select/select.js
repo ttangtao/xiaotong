@@ -4,9 +4,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    inputShowed: false,
-    inputVal: "",
-    currentTab: 0,//当前swiper
+    activeIndex: 1,
+    sliderOffset: 0,
+    sliderLeft: 0,
     content:"",//搜索内容
     checkboxItems: [
       { name: '研发部', value: '0', num:12,checked: true },
@@ -23,22 +23,19 @@ Page({
       { name: '综合部', value: '11', num: 10 },
     ],//多选人员
   },
-  swichNav: function (e) {
-    // console.log(e);
-    var that = this;
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current,
-      })
-    }
-  },
-  swiperChange: function (e) {
-    // console.log(e);
+  tabClick1: function (e) {
+    console.log(e.currentTarget)
     this.setData({
-      currentTab: e.detail.current,
-    })
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
+  },
+  tabClick2: function (e) {
+    console.log(e.currentTarget)
+    this.setData({
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
   },
   // 搜索Btn
   searchBtn() {

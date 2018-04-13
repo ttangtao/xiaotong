@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/todoWork/todoWork",
-    "pages/announcement/select/select",
-    "pages/myApply/myApply",
     "pages/announcement/announcement",
+    "pages/announcement/select/select",
+    "pages/announcement/readRecord/readRecord",
+    "pages/todoWork/todoWork",
+    "pages/myApply/myApply",
     "pages/announcement/release/release",
     "pages/announcement/announcementDetail/announcementDetail",
     "pages/payment/payment",
