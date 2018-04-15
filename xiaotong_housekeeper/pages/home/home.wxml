@@ -121,7 +121,7 @@
   <!--上班  -->
   <view class='work_all'>
     <view class='w_left'>
-      <text>上班</text>
+      <text class='upBtn'>上班</text>
     </view>
     <view class='w_right'>
       <view class='w_right_top'>
@@ -144,8 +144,8 @@
   </view>
   <!--下班  -->
   <view class='work_all'>
-    <view style='background:#823935' class='w_left'>
-      <text>下班</text>
+    <view class='w_left'>
+      <text class='upBtn'>下班</text>
     </view>
     <view class='w_right'>
       <view class='w_right_top'>

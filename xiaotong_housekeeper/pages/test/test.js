@@ -7,7 +7,7 @@ Page({
   },
   onReady: function () {
     var that = this;
-    var url = 'https://bx.wandaotong.cn/Controller/QuestionAction.ashx?type=getAllQuestion';
+    var url = 'Controller/QuestionAction.ashx?type=getAllQuestion';
     request.sendRequest(url, 'GET', {}, {})
       .then(function (response) {
         console.log(response);

@@ -46,21 +46,11 @@
   bottom: 0;
 }
 
-.ptButton{
-  background-color: #F3A971;
-  color: #fff;
-  border:none;
-}
-
-.ptButtonHover {
-  background-color:#DE9C53;
-}
-
 .uploadPic{
   margin: 20rpx auto;
   width: 90%;
   height: 400rpx;
-  background: #CD6A65
+  background: #30c37d
 }
 .inputCls{
   border: 1rpx solid #ccc;
@@ -70,4 +60,8 @@
   font-size: 32rpx;
   color: #555;
   padding: 0 10rpx;
+}
+.sec_picker{
+  font-size: 32rpx;
+  color: #555;
 }

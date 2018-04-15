@@ -6,7 +6,9 @@
 }
 
 text{
-  font-family: "consolas"
+  font-family: "consolas";
+  color: #555;
+  font-size: 32rpx;
 }
 page {
   background: #f4f4f4;
@@ -116,10 +118,10 @@ image {
   background: #46DC96;
 }
 .ptButton{
-  background-color: #F3A971;
+  background-color: #30c37d;
   color: #fff;
   border:none;
 }
 .ptButtonHover {
-  background-color:#DE9C53;
+  background-color:#2eb776!important;
 }

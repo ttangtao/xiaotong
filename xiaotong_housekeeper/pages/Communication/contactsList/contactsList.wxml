@@ -1,0 +1,47 @@
+<!--pages/Communication/contactsList/contactsList.wxml-->
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+
+
+  <view wx:for="{{5}}" wx:key="{{index}}" class='timeMenRow flex weui-check__label'>
+    <view class='teamRow_headPic'>
+      <image></image>
+    </view>
+    <view class='teamRow_info'>
+      <view class='teamRow_info_top'>
+        <text>唐涛</text>
+      </view>
+      <view class='teamRow_info_bottom'>
+        <text style='margin-right:10rpx;'>项目经历</text>
+        <text>四川</text>
+        <text>成都</text>
+      </view>
+    </view>
+    <view class='teamRow_right'>
+      <image src='../../img/right.png'></image>
+    </view>
+  </view>
+
+
+  <view style='height:160rpx'></view>
+
+  <view class='footer_lp'>
+    <text class='selectNum'>已选择：10人</text>
+    <view class='sureBtn'>
+      <button class='ptButton' hover-class='ptButtonHover' bindtap='toRelease'>确 定</button>
+    </view>
+  </view>

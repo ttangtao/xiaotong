@@ -1,0 +1,2 @@
+/* pages/Communication/contactsInfo/contactsInfo.wxss */
+@import '../../MemberInformation/MemberInformation.wxss'

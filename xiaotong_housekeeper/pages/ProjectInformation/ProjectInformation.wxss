@@ -49,13 +49,12 @@ page{
   padding: 20rpx;
   border-bottom: 1rpx solid #ccc;
   /* justify-content: space-between; */
-
 }
 .teamRow_headPic{
   width: 140rpx;
   height: 140rpx;
   border-radius: 50%;
-  background: #CD6A65;
+  background: #30c37d;
 }
 .teamRow_info{
   margin-left: 20rpx;

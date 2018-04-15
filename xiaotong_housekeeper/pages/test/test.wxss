@@ -1,1 +1,9 @@
 /* pages/test/test.wxss */
+view{
+  margin: 50rpx;
+}
+.box1{
+  width: 80%;
+  height: 400rpx;
+  background: #30c37d;
+}

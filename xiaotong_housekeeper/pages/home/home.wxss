@@ -73,7 +73,7 @@
 .w_left{
   width: 240rpx;
   height: 80rpx;
-  background: #83AF9B;
+  background: #30c37d;
   text-align: center;
   color: white;
   line-height: 80rpx;
@@ -82,4 +82,8 @@
   border-radius: 10rpx;
   letter-spacing: 4rpx;
   margin-right: 40rpx;
+}
+.upBtn{
+  color: #fff;
+  font-size: 34rpx;
 }

@@ -1,0 +1,87 @@
+/* pages/Communication/Communication.wxss */
+.border {
+  border: 1px solid #ccc;
+  padding:14rpx 75rpx 14rpx 34rpx;
+  border-radius: 50rpx;
+  margin: 20rpx auto;
+}
+.searchWrap {
+  padding: 0 20rpx;
+  position: relative;
+}
+.icon {
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.incoWrap {
+  position: absolute;
+  right: 28rpx;
+  top: 10rpx;
+}
+.toPeople {
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.swiper-tab {  
+  display: flex;  
+  flex-direction: row;  
+  line-height: 80rpx;  
+}  
+.tab-item {  
+  width: 50%;  
+  text-align: center;  
+  font-size: 32rpx;  
+  color: #555;  
+}  
+.on {  
+  color: #30c37d;  
+  font-size: 32rpx;
+}
+.leftPart {
+  border-right: 1rpx solid #ccc;  
+}
+.rightPart {
+  border-left: 1rpx solid #ccc;  
+}
+.row_lp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.footer_lp {
+  display: flex;
+  padding: 20rpx 0rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.submitBtn {
+  margin-right: 20rpx;
+  padding: 0rpx 40rpx;
+  border-radius: 10rpx;
+  background-color: #CD6A65!important;
+  display: flex;
+  align-items: center;
+}
+.selectNum {
+  color: #F3A971;
+  margin-left: 20rpx;
+}
+.sureBtn{
+  margin-right: 20rpx;
+}
+.weui-search-bar__cancel-btn{
+  font-size: 28rpx;
+}

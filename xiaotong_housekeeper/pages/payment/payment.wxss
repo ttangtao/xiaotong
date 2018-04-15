@@ -8,10 +8,10 @@
   justify-content: space-between;
 }
 .askTishi>text:first-child{
-  color: #CD6A65
+  color: #30c37d
 }
 .askTishi>text:last-child{
-  color: #F3A971
+  color: #30c37d
 }
 
 .reasonBox{

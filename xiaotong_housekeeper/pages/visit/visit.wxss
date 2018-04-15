@@ -1,0 +1,7 @@
+@import "../Communication/Communication.wxss";
+@import "../ProjectInformation/ProjectInformation.wxss";
+.footer_button{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
