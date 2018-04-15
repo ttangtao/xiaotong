@@ -9,5 +9,5 @@
         <image src='../../img/right.png' class='icon'></image>
       </view>
     </view>
-    <view class='.btnWarp_lp'><button class="weui-btn btn_lp" type="primary">发公告</button></view>
+    <view class='btnWarp_lp'><button class="weui-btn btn_lp" type="primary">发公告</button></view>
 </view>

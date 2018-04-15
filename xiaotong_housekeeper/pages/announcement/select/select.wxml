@@ -1,63 +1,64 @@
 <!--pages/announcement/select/select.wxml-->
-<view>
-  <!-- <view class='searchWrap'>
-        <input class='border' placeholder="搜索" auto-focus name='content' bindinput ="searchInput"/>
-        <view class='incoWrap' bindtap='searchBtn'>
-          <image src='../../img/search.png' class='icon'></image>
-        </view>
-  </view> -->
-  <view class="weui-search-bar">
-      <view class="weui-search-bar__form">
-          <view class="weui-search-bar__box">
-              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-              <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
-              <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-                  <icon type="clear" size="14"></icon>
-              </view>
-          </view>
-          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
-              <icon class="weui-icon-search" type="search" size="14"></icon>
-              <view class="weui-search-bar__text">搜索</view>
-          </label>
-      </view>
-      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
-  </view>
-  <view class="swiper-tab">
-    <view class="tab-item {{currentTab==0 ? 'on leftPart' : ''}}" data-current="0" bindtap="swichNav">按部门</view>
-    <view class="tab-item {{currentTab==1 ? 'on rightPart' : ''}}" data-current="1" bindtap="swichNav">按项目</view>
-  </view>
-  <swiper class="swiper" current="{{currentTab}}" duration="200" style='height:{{checkboxItems.length*100+130}}rpx' bindchange="swiperChange">
-    <swiper-item>
-      <view class='rankWrap'>
-        <view class="weui-cells weui-cells_after-title">
-            <checkbox-group bindchange='checkboxChange'>
-                <view wx:for="{{checkboxItems}}" wx:key="value" class='row_lp'>
-                  <label class="weui-cell weui-check__label">
-                      <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
-                      <view class="weui-cell__hd weui-check__hd_in-checkbox">
-                          <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
-                          <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
-                      </view>
-                      <view class="weui-cell__bd">{{item.name}}<text>({{item.num}}/{{item.num}})</text></view>
-                  </label>
-                  <view class="toPeople"><text>请选择</text><image src='../../img/right.png' class='icon'></image></view>
+<view class=''>
+  <view class="">
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
                 </view>
-                
-            </checkbox-group>
-            <!-- <view class="weui-cell weui-cell_link">
-                <view class="weui-cell__bd">添加更多</view>
-            </view> -->
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="14"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+            </label>
         </view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view class='rankWrap'>
-          <text>5666666666</text>        
-      </view>
-    </swiper-item>
-  </swiper>
-  <view class='footer_lp'>
-    <text class='selectNum'>已选择：10人</text>
-    <view class=''><button class="weui-btn submitBtn" type="primary" bindtap='toRelease'>确 定</button></view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-navbar navbar_lp">
+        <view id="1" class="weui-navbar__item {{activeIndex == 1 ? 'weui-bar__item_on' : ''}}" bindtap="tabClick1">
+            <view class="weui-navbar__title">按部门</view>
+        </view>
+        <view id="2" class="weui-navbar__item {{activeIndex == 2 ? 'weui-bar__item_on' : ''}}" bindtap="tabClick2">
+            <view class="weui-navbar__title">按项目</view>
+        </view>
+          <view class="weui-navbar__slider sider_lp" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> 
+    </view>
+    <view class="weui-tab__panel panel_lp">
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='rankWrap'>
+            <view class="weui-cells weui-cells_after-title">
+                <checkbox-group bindchange='checkboxChange'>
+                    <view wx:for="{{checkboxItems}}" wx:key="value" class='row_lp weui-check__label'>
+                      <label class="weui-cell">
+                          <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+                          <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                              <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                              <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                          </view>
+                          <view class="weui-cell__bd">{{item.name}}<text>({{item.num}}/{{item.num}})</text></view>
+                      </label>
+                      <view class="toPeople"><text>请选择</text><image src='../../img/right.png' class='icon'></image></view>
+                    </view>
+                    
+                </checkbox-group>
+                <!-- <view class="weui-cell weui-cell_link">
+                    <view class="weui-cell__bd">添加更多</view>
+                </view> -->
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class='rankWrap'>
+            <text>5666666666</text>        
+          </view>
+        </view>
+    </view>
+    <view class='footer_lp'>
+      <text class='selectNum'>已选择：10人</text>
+      <view class=''><button class="weui-btn submitBtn" type="primary" bindtap='toRelease'>确 定</button></view>
+    </view>
   </view>
 </view>
