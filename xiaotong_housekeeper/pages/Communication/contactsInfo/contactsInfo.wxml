@@ -1,5 +1,3 @@
-<!--pages/Communication/contactsInfo/contactsInfo.wxml-->
-<!--pages/MemberInformation/MemberInformation.wxml-->
 <view class='Res_pre_head'>
   <view class='headPic'>
     <image></image>

@@ -1,0 +1,41 @@
+<!--pages/ProjectInformation/fillOutputValue/fillOutputValue.wxml-->
+<view>
+  <view wx:for="{{row1List}}" wx:key="{{index}}" class='flex row otherRow'>
+    <text>{{item.key}}</text>
+    <text>{{item.value}}</text>
+  </view>
+</view>
+
+<view style='padding:10rpx;' class='flex'>
+  <view class='icon1'>
+    <image src='../../img/start2.png'></image>
+  </view>
+  <view style='margin-left:10rpx;'>
+    <text>结算明细</text>
+  </view>
+</view>
+
+<view>
+  <view wx:for="{{row2List}}" wx:key="{{index}}" class='row'>
+    <view class='flex otherRow'>
+      <text>结算类型</text>
+      <text>{{item.kind}}</text>
+    </view>
+    <view class='flex otherRow'>
+      <text>单价(不含税)</text>
+      <text>{{item.price}}</text>
+    </view>
+    <view class='flex otherRow'>
+      <view>
+        <text>数量</text>
+      </view>
+      <view class='inputCls'>
+        <input value='{{item.value}}'></input>
+      </view>
+    </view>
+  </view>
+</view>
+<view style='height:180rpx'></view>
+<view bindtap='commitBtn' class='commitBtn'>
+  <button class='ptButton' style='border-radius:0' hover-class='ptButtonHover'>提交</button>
+</view>

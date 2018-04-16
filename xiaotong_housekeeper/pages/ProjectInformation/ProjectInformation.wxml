@@ -4,28 +4,63 @@
 </view>
 <!--项目信息-->
 <view hidden="{{currentTab!==0}}">
-
-  <view bindtap='gotoInfoBtn' class='proInfo_row flex'>
-    <text>客户名称</text>
-    <view class='flex'>
-      <view>
-        <text>xxx公司</text>
+  <!--员工  -->
+  <view wx:if="{{who=='员工'}}">
+    <view bindtap='gotoInfoBtn' class='proInfo_row flex'>
+      <text>客户名称</text>
+      <view class='flex'>
+        <view>
+          <text>xxx公司</text>
+        </view>
+        <view class='rightIcon'>
+          <image src='../img/right.png'></image>
+        </view>
       </view>
-      <view class='rightIcon'>
-        <image src='../img/right.png'></image>
+    </view>
+    <view class='proInfo_row flex'>
+      <text>项目名称</text>
+      <text>xxx项目</text>
+    </view>
+    <view class='proInfo_row flex'>
+      <text>立项日期</text>
+      <text>2018年1月1日</text>
+    </view>
+  </view>
+  <!--经理  -->
+  <view wx:elif="{{who=='经理'}}">
+    <view wx:for="{{managerList}}"  wx:key="{{index}}"  data-kind='{{item.key}}' bindtap='jump' class='proInfo_row flex'>
+      <text>{{item.key}}</text>
+      <view class='flex'>
+        <view>
+          <text>{{item.value}}</text>
+        </view>
+        <view wx:if="{{item.src}}" class='icon2'>
+          <image src='{{item.src}}'></image>
+        </view>
+      </view>
+    </view>
+
+    <view class='pro_title flex'>
+      <view class='icon1'>
+        <image src='../img/start2.png'></image>
+      </view>
+      <view style='margin-left:10rpx'>
+        <text>项目进度</text>
+      </view>
+    </view>
+    <view wx:for="{{managerProSchedule}}"  bindtap='jump'  wx:key="{{index}}" data-kind='{{item.key}}' class='proInfo_row flex'>
+      <text>{{item.key}}</text>
+      <view class='flex'>
+        <view>
+          <text>{{item.value}}</text>
+        </view>
+        <view wx:if="{{item.src}}" class='icon2'>
+          <image src='{{item.src}}'></image>
+        </view>
       </view>
     </view>
   </view>
-
-  <view class='proInfo_row flex'>
-    <text>项目名称</text>
-    <text>xxx项目</text>
-  </view>
-
-  <view class='proInfo_row flex'>
-    <text>立项日期</text>
-    <text>2018年1月1日</text>
-  </view>
+  <view style='height:40rpx'></view>
 </view>
 
 <!--团队成员-->

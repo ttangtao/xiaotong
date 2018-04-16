@@ -1,0 +1,37 @@
+/* pages/visit/ExternalContact/ExternalCon_record/ExternalCon_record.wxss */
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.row {
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+  padding: 4rpx 20rpx;
+}
+
+.row:nth-child(1) {
+  border-top: 1rpx solid #ccc;
+}
+
+.row>view:first-child {
+  width: 30%;
+}
+
+.row>view:nth-child(2) {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.row>view:nth-child(3) {
+  width: 20%;
+  justify-content:flex-end;
+}
+.otherptButton{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+}

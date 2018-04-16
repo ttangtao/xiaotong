@@ -1,0 +1,10 @@
+/* pages/visit/ExternalContact/ExternalCon_edit/ExternalCon_edit.wxss */
+@import "../ExternalContact.wxss";
+@import "../../../addNewProEx/addNewProEx.wxss";
+.inputSR{
+  width: 30%;
+  border: 1rpx solid #ccc;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  color: #555;
+}

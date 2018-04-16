@@ -1,0 +1,74 @@
+<!--pages/order/addNewOrder/addNewOrder.wxml-->
+<view class='flex otherOptions'>
+  <text style='color:#30c37d'>项目总订单(元)</text>
+  <text style='color:#30c37d'>0</text>
+</view>
+<view class='flex otherOptions'>
+  <text style='color:#30c37d'>项目总订单(元)</text>
+  <text style='color:#30c37d'>0</text>
+</view>
+<view class='flex otherOptions'>
+  <text style='color:#30c37d'>项目总订单(元)</text>
+  <text style='color:#30c37d'>0</text>
+</view>
+
+<view wx:for="{{fillList}}" wx:key="{{index}}" class='flex otherOptions'>
+  <view>
+    <text>{{item.key}}</text>
+  </view>
+  <view class='flex'>
+    <view>
+      <text>{{item.value}}</text>
+    </view>
+    <view wx:if="{{item.src}}" class='icon2'>
+      <image src='{{item.src}}'></image>
+    </view>
+  </view>
+</view>
+
+<view class='flex otherOptions'>
+<view><text>所属月份</text></view>
+  <picker mode="date" fields="month" value="{{date}}"  bindchange="bindDateChange">
+    <view class="picker flex">
+      <view><text>{{date}}</text></view>
+      <view class='icon2'><image src='../../img/bottom.png'></image></view>
+    </view>
+  </picker>
+</view>
+
+
+<view style='padding:10rpx;' class='flex'>
+  <view class='icon1'>
+    <image src='../../img/start2.png'></image>
+  </view>
+  <view style='margin-left:10rpx;'>
+    <text>结算明细</text>
+  </view>
+</view>
+
+<view>
+  <view wx:for="{{row2List}}" wx:key="{{index}}" class='row'>
+    <view class='flex otherRow'>
+      <text>结算类型</text>
+      <text>{{item.kind}}</text>
+    </view>
+    <view class='flex otherRow'>
+      <text>单价(不含税)</text>
+      <text>{{item.price}}</text>
+    </view>
+    <view class='flex otherRow'>
+      <view>
+        <text>数量</text>
+      </view>
+      <view>
+        <!-- <input value='{{item.value}}'></input> -->
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style='height:180rpx'></view>
+<view bindtap='commitBtn' class='commitBtn'>
+  <button class='ptButton' style='border-radius:0' hover-class='ptButtonHover'>提交</button>
+</view>

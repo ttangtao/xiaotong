@@ -1,0 +1,16 @@
+/* pages/interview/candidateInfo/candidateInfo.wxss */
+@import '../../Communication/contactsInfo/contactsInfo';
+.VisitRecord {
+  justify-content: space-between;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.Res_pre_head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}

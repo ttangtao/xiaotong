@@ -1,0 +1,11 @@
+<!--pages/ClearingItem/ClearingItem.wxml-->
+<view wx:for="{{5}}" wx:key="{{index}}" class='box'>
+  <view class='row'>
+    <text>结算类型</text>
+    <text>高级</text>
+  </view>
+  <view class='row'>
+    <text>单价(不含税)</text>
+    <text>15000</text>
+  </view>
+</view>

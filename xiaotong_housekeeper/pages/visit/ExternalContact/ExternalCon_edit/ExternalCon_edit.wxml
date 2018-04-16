@@ -1,0 +1,88 @@
+<!--pages/visit/ExternalContact/ExternalCon_edit/ExternalCon_edit.wxml-->
+<view class='flex ts_box'>
+  <view class='picIcon'>
+    <image src='../../../img/start2.png'></image>
+  </view>
+  <view class='ts_text'>
+    <text>联系方式</text>
+  </view>
+</view>
+<view>
+  <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+    <text>{{item.key}}</text>
+    <text>{{item.value}}</text>
+  </view>
+</view>
+
+<!--性别  -->
+<view class="section">
+  <view class="section__title">性别</view>
+  <!--picker  -->
+  <picker bindchange="bindPickerChange" data-kind='gender' value="{{gender}}" range="{{genderAry}}">
+    <view class="picker">
+      <view>
+        <text>{{gender}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../../../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+</view>
+<!--生日  -->
+<view class="section">
+  <view class="section__title">生日</view>
+  <picker data-kind='brithday' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{brithday}}">
+    <view class="picker">
+      <view>
+        <text>{{brithday}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../../../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+</view>
+<!--公司  -->
+<view class="section">
+  <view class="section__title">公司</view>
+  <!--picker  -->
+  <picker wx:if="{{companyShow}}" bindchange="bindPickerChange" data-kind='company' value="{{company}}" range="{{companyAry}}">
+    <view class="picker">
+      <view>
+        <text>{{company}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../../../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+  <!--input  -->
+  <view class='inputSR' wx:else>
+    <input placeholder='请输入' bindinput='changInput' value='{{company}}'></input>
+  </view>
+</view>
+
+<view class='flex ts_box'>
+  <view class='picIcon'>
+    <image src='../../../img/start2.png'></image>
+  </view>
+  <view class='ts_text'>
+    <text>共享外部联系人</text>
+  </view>
+</view>
+<!--共享  -->
+<view class="section">
+  <view class="section__title">共享范围</view>
+  <!--picker  -->
+  <picker bindchange="bindPickerChange" data-kind='share' value="{{share}}" range="{{shareAry}}">
+    <view class="picker">
+      <view>
+        <text>{{share}}</text>
+      </view>
+      <view class='bottom'>
+        <image src='../../../img/bottom.png'></image>
+      </view>
+    </view>
+  </picker>
+</view>

@@ -1,0 +1,13 @@
+/* pages/ClearingItem/ClearingItem.wxss */
+.box:nth-child(1){
+  border-top: 1rpx solid #ccc;
+}
+.box{
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}

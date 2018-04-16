@@ -1,0 +1,43 @@
+/* pages/visit/ExternalContact/newEx_record/newEx_record.wxss */
+
+.row {
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.inputCls {
+  width: 30%;
+  border: 1rpx solid #ccc;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  color: #555;
+}
+
+.row_container {
+  margin-left: 10rpx;
+}
+
+.areaCls {
+  height: 400rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+  font-size: 32rpx;
+  color: #555;
+}
+
+.uploadBtn {
+  width: 60%;
+  margin: 50rpx auto;
+}
+
+.commitBtn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.otherOptions{
+  border-radius: 0;
+}

@@ -1,0 +1,13 @@
+@import "../Communication/Communication.wxss";
+@import "../ProjectInformation/ProjectInformation.wxss";
+.footer_button{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.info_cls{
+  margin-right: 10rpx;
+  padding-right: 10rpx;
+  font-size: 28rpx;
+  border-right: 1rpx solid #ccc;
+}

@@ -1,0 +1,21 @@
+/* pages/ProjectInformation/OutputValue/OutputValue.wxss */
+@import '../ProjectInformation/ProjectInformation.wxss';
+.row{
+  padding: 20rpx;
+  background: #fff;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.otherRow{
+  justify-content: space-between;
+}
+.otherOptions{
+  align-self: flex-start;
+}
+.rankHead{
+  margin: 30rpx 0;
+  background: #f5f5f5;
+}
+.rankPick {
+  background-color: #fff;
+}

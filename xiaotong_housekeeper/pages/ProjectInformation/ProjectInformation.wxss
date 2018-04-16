@@ -1,7 +1,6 @@
 page{  
   display: flex;  
   flex-direction: column;  
-  height: 100%;  
 }  
 .navbar{  
   flex: none;  
@@ -18,7 +17,7 @@ page{
   /* margin:0 30rpx; */
 }  
 .navbar .item.active{  
-  color: #CD6A65;  
+  color: #30c37d;  
 }  
 .navbar .item.active:after{  
   content: "";  
@@ -28,7 +27,7 @@ page{
   left: 0;  
   right: 0;  
   height: 4rpx;  
-  background: #CD6A65;  
+  background: #30c37d;  
 }  
 .proInfo_row{
   justify-content: space-between;
@@ -101,4 +100,7 @@ page{
   line-height: 80rpx;
   background: steelblue;
   border-radius: 50%;
+}
+.pro_title{
+  padding: 10rpx;
 }

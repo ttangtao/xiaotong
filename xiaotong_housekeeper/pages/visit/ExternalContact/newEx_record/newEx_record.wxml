@@ -1,0 +1,65 @@
+<!--pages/visit/ExternalContact/newEx_record/newEx_record.wxml-->
+<view>
+  <view class='flex row'>
+    <view class='flex'>
+      <view class='icon1'>
+        <image src='../../../img/start.png'></image>
+      </view>
+      <view class='row_container'>
+        <text>拜访方式</text>
+      </view>
+    </view>
+    <!--pick  -->
+    <picker bindchange="bindPickerChange" data-kind='VisitWay' value="{{VisitWay}}" range="{{VisitWayAry}}">
+      <view class="picker flex">
+        <view>
+          <text>{{VisitWay}}</text>
+        </view>
+        <view class='icon1'>
+          <image src='../../../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view>
+  <view class='flex row'>
+    <view class='flex'>
+      <view class='icon1'>
+        <image src='../../../img/start.png'></image>
+      </view>
+      <view class='row_container'>
+        <text>拜访事宜</text>
+      </view>
+    </view>
+    <!--input  -->
+    <input class='inputCls' value='{{VisitMatters}}'></input>
+  </view>
+</view>
+
+<view>
+  <view class='flex row'>
+    <view class='flex'>
+      <view class='icon1'>
+        <image src='../../../img/start.png'></image>
+      </view>
+      <view class='row_container'>
+        <text>拜访内容</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <textarea class='areaCls'></textarea>
+
+  </view>
+</view>
+
+<view class='uploadBtn'>
+  <button class='ptButton'>上传图片</button>
+</view>
+
+
+<view bindtap='commitBtn' class='commitBtn'>
+  <button class='ptButton otherOptions'>提交</button>
+</view>

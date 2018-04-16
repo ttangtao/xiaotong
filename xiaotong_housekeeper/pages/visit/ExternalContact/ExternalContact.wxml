@@ -1,18 +1,23 @@
 <!--pages/MemberInformation/MemberInformation.wxml-->
 <view class='Res_pre_head'>
   <view>
-    <text>姓名</text>
+    <text>姓名:</text>
+    <text>xxx</text>
   </view>
-  <view>
-    <image></image>
-    <image></image>
+  <view class='flex'>
+    <view bindtap='EditBtn' class='icon3'>
+      <image src='../../img/edit.png'></image>
+    </view>
+    <view bindtap='DelBtn' class='icon3'>
+      <image src='../../img/delete.png'></image>
+    </view>
   </view>
 </view>
 <!-- 基本信息 -->
 <view>
   <view class='flex ts_box'>
     <view class='picIcon'>
-      <image src='../../img/start.png'></image>
+      <image src='../../img/start2.png'></image>
     </view>
     <view class='ts_text'>
       <text>联系方式</text>
@@ -56,5 +61,29 @@
   <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
     <text>{{item.key}}</text>
     <text>{{item.value}}</text>
+  </view>
+</view>
+
+<view class='flex ts_box'>
+  <view class='picIcon'>
+    <image src='../../img/start2.png'></image>
+  </view>
+  <view class='ts_text'>
+    <text>拜访记录</text>
+  </view>
+</view>
+
+<view bindtap='VisitRecordBtn' class='VisitRecord flex'>
+  <view class='icon1'>
+    <image src='../../img/message1.png'></image>
+  </view>
+  <view>
+    <text>X</text>
+    <text>条记录,</text>
+    <text>X</text>
+    <text>天未更新</text>
+  </view>
+  <view class='icon2'>
+    <image src='../../img/right.png'></image>
   </view>
 </view>

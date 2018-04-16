@@ -11,7 +11,19 @@ Page({
       { key: '地址', value: 'xxx省xx市xx路xx号' },
       { key: '生日', value: 'xx月xx日' },
       { key: '性别', value: '男' }
-    ]
+    ],
+  },
+  //跳转到拜访记录
+  VisitRecordBtn(e) {
+    wx.navigateTo({
+      url: './ExternalCon_record/ExternalCon_record'
+    })
+  },
+  //跳转到编辑界面
+  EditBtn(){
+    wx.navigateTo({
+      url: './ExternalCon_edit/ExternalCon_edit',
+    })
   },
 
   /**
