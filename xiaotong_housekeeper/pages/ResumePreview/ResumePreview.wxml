@@ -44,7 +44,7 @@
     <text>项目经历</text>
   </view>
   
-  <view wx:for="{{4}}" wx:key="{{index}}" class='rp_projectList'>
+  <view wx:for="{{2}}" wx:key="{{index}}" class='rp_projectList'>
     <view class='rp_pl_top'>
       <view class='pl_left'>
         <text>2017年1月1日</text>

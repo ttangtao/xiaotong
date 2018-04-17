@@ -1,9 +1,10 @@
 <!--pages/visit/ExternalContact/newEx_record/newEx_record.wxml-->
 <view>
-  <view class='flex row'>
+  <view wx:if="{{id_status==='拜访'}}" class='flex row'>
     <view class='flex'>
       <view class='icon1'>
-        <image src='../../../img/start.png'></image>
+        <image wx:if="{{VisitWay!='请选择'||resWay!='请选择'||resRul!='请选择'||leaveDate!='请选择'}}" src='../../../img/start2.png'></image>
+        <image wx:else src='../../../img/start.png'></image>
       </view>
       <view class='row_container'>
         <text>拜访方式</text>
@@ -15,26 +16,103 @@
         <view>
           <text>{{VisitWay}}</text>
         </view>
-        <view class='icon1'>
+        <view class='icon2'>
           <image src='../../../img/bottom.png'></image>
         </view>
       </view>
     </picker>
   </view>
+
+  <view wx:if="{{id_status==='面试'}}" class='flex row'>
+    <view class='flex'>
+      <view class='icon1'>
+        <image wx:if="{{VisitWay!='请选择'||resWay!='请选择'||resRul!='请选择'||leaveDate!='请选择'}}" src='../../../img/start2.png'></image>
+        <image wx:else src='../../../img/start.png'></image>
+      </view>
+      <view class='row_container'>
+        <text>面试方式</text>
+      </view>
+    </view>
+    <!--pick  -->
+    <picker bindchange="bindPickerChange" data-kind='resWay' value="{{resWay}}" range="{{resWayAry}}">
+      <view class="picker flex">
+        <view>
+          <text>{{resWay}}</text>
+        </view>
+        <view class='icon2'>
+          <image src='../../../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+
+  <view wx:if="{{id_status==='离职'}}" class='flex row'>
+    <view class='flex'>
+      <view class='icon1'>
+        <image wx:if="{{VisitWay!='请选择'||resWay!='请选择'||resRul!='请选择'||leaveDate!='请选择'}}" src='../../../img/start2.png'></image>
+        <image wx:else src='../../../img/start.png'></image>
+      </view>
+      <view class='row_container'>
+        <text>期望离职日期</text>
+      </view>
+    </view>
+    <!--pick  -->
+    <picker bindchange="bindPickerChange" data-kind='leaveDate' mode="date" start="2015-09-01" end="2017-09-01" value="{{leaveDate}}">
+      <view class="picker flex">
+        <view>
+          <text>{{leaveDate}}</text>
+        </view>
+        <view class='icon2'>
+          <image src='../../../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+
 </view>
 
 <view>
-  <view class='flex row'>
+
+  <view wx:if="{{id_status==='拜访'}}" class='flex row'>
     <view class='flex'>
       <view class='icon1'>
-        <image src='../../../img/start.png'></image>
+        <image wx:if="{{Visit_sy}}" src='../../../img/start2.png'></image>
+        <image wx:else src='../../../img/start.png'></image>
       </view>
       <view class='row_container'>
         <text>拜访事宜</text>
       </view>
     </view>
     <!--input  -->
-    <input class='inputCls' value='{{VisitMatters}}'></input>
+    <view class='inputCls'>
+      <input data-kind='Visit_sy' bindinput='bindPickerChange' value='{{Visit_sy}}'></input>
+    </view>
+  </view>
+
+  <view wx:if="{{id_status==='面试'}}" class='flex row'>
+    <view class='flex'>
+      <view class='icon1'>
+        <image wx:if="{{resRul!='请选择'}}" src='../../../img/start2.png'></image>
+        <image wx:else src='../../../img/start.png'></image>
+      </view>
+      <view class='row_container'>
+        <text>面试结论</text>
+      </view>
+    </view>
+
+    <view>
+      <picker bindchange="bindPickerChange" data-kind='resRul' value="{{resRul}}" range="{{resRulAry}}">
+        <view class="picker flex">
+          <view>
+            <text>{{resRul}}</text>
+          </view>
+          <view class='icon2'>
+            <image src='../../../img/bottom.png'></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+
   </view>
 </view>
 
@@ -42,16 +120,20 @@
   <view class='flex row'>
     <view class='flex'>
       <view class='icon1'>
-        <image src='../../../img/start.png'></image>
+        <image wx:if="{{VisitMatters||resMatters||leavetters}}" src='../../../img/start2.png'></image>
+        <image wx:else src='../../../img/start.png'></image>
       </view>
       <view class='row_container'>
-        <text>拜访内容</text>
+        <text wx:if="{{id_status==='拜访'}}">拜访内容</text>
+        <text wx:if="{{id_status==='面试'}}">面试内容</text>
+        <text wx:if="{{id_status==='离职'}}">离职原因</text>
       </view>
     </view>
   </view>
   <view>
-    <textarea class='areaCls'></textarea>
-
+    <textarea wx:if="{{id_status==='拜访'}}" data-kind='area' value="{{VisitMatters}}" bindinput='bindPickerChange' class='areaCls'> </textarea>
+    <textarea wx:if="{{id_status==='面试'}}" data-kind='area' value="{{resMatters}}" bindinput='bindPickerChange' class='areaCls'> </textarea>
+    <textarea wx:if="{{id_status==='离职'}}" data-kind='area' value="{{leavetters}}" bindinput='bindPickerChange' class='areaCls'> </textarea>
   </view>
 </view>
 

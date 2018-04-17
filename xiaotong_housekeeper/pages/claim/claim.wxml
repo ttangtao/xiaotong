@@ -1,8 +1,9 @@
 <!--pages/askLeave/askLeave.wxml-->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+     <view class='icon1'>
+      <image wx:if="{{projectBelongs==='请选择'}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>项目归属</text>
@@ -27,17 +28,18 @@
 
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{moneyType==='请选择'}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>费用类型</text>
     </view>
   </view>
   <view class='flex'>
-    <picker data-kind='projectBelongs' bindchange="bindPickerChange" value="{{projectBelongs}}" range="{{projectBelongsAry}}">
+    <picker data-kind='moneyType' bindchange="bindPickerChange" value="{{moneyType}}" range="{{moneyTypeAry}}">
       <view class="picker">
-        {{projectBelongs}}
+        {{moneyType}}
       </view>
     </picker>
     <view class='fxCls'>
@@ -48,22 +50,24 @@
 
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{money===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>费用金额（元）</text>
     </view>
   </view>
   <view class='flex inputCls'>
-      <input></input>
+      <input bindinput='moneyEvent' value='{{money}}'></input>
   </view>
 </view>
 
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{reason===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>事由</text>
@@ -73,25 +77,26 @@
 
 <view class='reasonBox'>
   <view class='reason'>
-    <textarea auto-height value='{{reason}}'></textarea>
+    <textarea auto-height bindinput='areaEvent' placeholder='请输入事由' value='{{reason}}'></textarea>
   </view>
 </view>
 
 <view bindtap='uploadPic' class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+     <view class='icon1'>
+      <image wx:if="{{uploadSrc===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>图片</text>
     </view>
   </view>
-  <view class='fxCls'>
+  <view class='icon2'>
     <image src='../img/add.png'></image>
   </view>
 </view>
 
-<view class='uploadPic'><image src='{{uploadSrc}}'></image></view>
+<view wx:if="{{uploadSrc}}" class='uploadPic'><image src='{{uploadSrc}}'></image></view>
 
 <view style='height:150rpx'></view>
 <view>

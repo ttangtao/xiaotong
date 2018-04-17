@@ -1,0 +1,72 @@
+/* pages/ProjectInformation/ProductionDetails/ProductionDetails.wxss */
+
+.row {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+}
+
+.colorCls {
+  color: #30c37d;
+}
+
+.otherRow {
+  justify-content: space-between;
+}
+
+.otherWDB {
+  margin: 20rpx 0;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #fff;
+}
+.otherOptions{
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.otherOptions:nth-child(1){
+  border-top: 1rpx solid #ccc;
+}
+.commitBtn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.areaCls{
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+  width: 100%;
+  font-size: 32rpx;
+  color: #555;
+}
+.picCls{
+  width: 90%;
+  margin: 20rpx auto;
+  background: steelblue;
+  height: 400rpx;
+}
+.sh_row{
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx;
+}
+.sh_row:nth-child(1){
+  border-top: 1rpx solid #ccc
+}
+.sh_head{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #30c37d;
+}
+.sh_name{
+  margin-left: 20rpx;
+}
+.sh_state{
+  flex-grow: 1;
+  margin-left: 20rpx;
+}
+.sh_state>text{
+  color: #30c37d;
+}

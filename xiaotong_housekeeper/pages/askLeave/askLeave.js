@@ -32,7 +32,7 @@ Page({
     jsDays: 0,
 
     // 事由
-    reason: "这里是事由",
+    reason: "",
 
     // 上传图片的地址
     uploadSrc: ''
@@ -40,19 +40,10 @@ Page({
   //上传图片函数
   uploadPic() {
     wx.chooseImage({
-      success: function (res) {
+      success: (res) => {
         var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
+        this.setData({
+          uploadSrc: tempFilePaths[0]
         })
       }
     })
@@ -66,7 +57,7 @@ Page({
       case "projectBelongs": {
         this.setData({
           projectBelongs: this.data.projectBelongsAry[value]
-        });break;
+        }); break;
       }
       case "askDayType": {
         this.setData({
@@ -94,6 +85,24 @@ Page({
         }); break;
       }
 
+    }
+  },
+  // area值改变
+  changeEvent(e) {
+    let newValue = e.detail.value;
+    this.setData({
+      reason: newValue
+    })
+  },
+  // 提交按钮
+  saveBtn() {
+    //todo 检查所有信息是否填写完整
+    if (true) {
+      wx.navigateBack({
+        delta: 1,
+      })
+    }else{
+      
     }
   },
   /**

@@ -17,7 +17,7 @@
   </view>
 
 
-  <view wx:for="{{5}}" wx:key="{{index}}" class='timeMenRow flex weui-check__label'>
+  <view wx:for="{{5}}" wx:key="{{index}}" data-row='{{item}}' bindtap='contactInfoBtn' class='timeMenRow flex weui-check__label'>
     <view class='teamRow_headPic'>
       <image></image>
     </view>
@@ -39,9 +39,9 @@
 
   <view style='height:160rpx'></view>
 
-  <view class='footer_lp'>
+  <!-- <view class='footer_lp'>
     <text class='selectNum'>已选择：10人</text>
     <view class='sureBtn'>
       <button class='ptButton' hover-class='ptButtonHover' bindtap='toRelease'>确 定</button>
     </view>
-  </view>
+  </view> -->

@@ -15,13 +15,15 @@ Page({
       { name: '综合部', value: '3', num: 10 },
       { name: '研发部', value: '4', num: 12, checked: true },
       { name: '综合部', value: '5', num: 10 },
-      { name: '研发部', value: '6', num: 12, checked: true },
-      { name: '综合部', value: '7', num: 10 },
-      { name: '研发部', value: '8', num: 12, checked: true },
-      { name: '综合部', value: '9', num: 10 },
-      { name: '研发部', value: '10', num: 12, checked: true },
-      { name: '综合部', value: '11', num: 10 },
-    ],//多选人员
+      { name: '研发部', value: '6', num: 12, checked: true }
+    ],
+    checkboxItems2: [
+      { name: '项目1', value: '0', num: 12, checked: true },
+      { name: '项目2', value: '1', num: 10 },
+      { name: '项目3', value: '2', num: 12, checked: true },
+      { name: '项目4', value: '3', num: 10 },
+      { name: '项目5', value: '4', num: 12, checked: true },
+    ],
   },
   swichNav: function (e) {
     console.log(e.target.dataset.current);
@@ -51,29 +53,6 @@ Page({
       content: e.detail.value
     })
   },
-  // 多选
-  checkboxChange: function (e) {
-    console.log(e);
-
-    var checkboxItems = this.data.checkboxItems, values = e.detail.value;
-    for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
-      checkboxItems[i].checked = false;
-
-      for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
-        if (checkboxItems[i].value == values[j]) {
-          checkboxItems[i].checked = true;
-          break;
-        }
-      }
-    }
-
-    this.setData({
-      checkboxItems: checkboxItems
-    });
-  },
-  checkboxChanges() {
-    console.log("ss")
-  },
   // 显示搜索
   showInput: function () {
     this.setData({
@@ -98,6 +77,16 @@ Page({
     this.setData({
       inputVal: e.detail.value
     });
+  },
+  //跳转到详情人员
+  checkboxChange(e){
+    let row = e.currentTarget.dataset.row;
+    console.log(row)
+    if (row){
+      wx.navigateTo({
+        url: './contactsList/contactsList',
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

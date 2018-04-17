@@ -1,0 +1,56 @@
+<view>
+  <view wx:for="{{row2List}}" wx:key="{{index}}" class='flex row otherRow'>
+    <view>
+      <text>{{item.key}}</text>
+    </view>
+    <view class='flex'>
+      <view wx:if="{{item.value}}">
+        <text>{{item.value}}</text>
+      </view>
+      <view wx:if="{{item.src}}" class='icon2'>
+        <image src='{{item.src}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view>
+  <view class='flex row otherRow'>
+    <view>
+      <text>合同描述</text>
+    </view>
+  </view>
+  <view>
+    <textarea class='areaCls' value='{{areaValue}}'></textarea>
+  </view>
+</view>
+
+<view>
+  <view wx:for="{{5}}" wx:key="{{index}}" class='sh_row'>
+    <view class='flex'>
+      <view class='sh_head'>
+        <image></image>
+      </view>
+      <view class='sh_name'>
+        <text>马云</text>
+      </view>
+      <view class='sh_state'>
+        <text>发起申请</text>
+      </view>
+      <view>
+        <text>03.08 </text>
+        <text>10:36</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='operation'>
+  <view>
+    <button bindtap='preBtn' class='pre' hover-class='perHover'>拒绝</button>
+  </view>
+  <view>
+    <button bindtap='nextBtn' class='next' hover-class='nextHover'>同意</button>
+  </view>
+</view>
+<view style='height:200rpx;'></view>

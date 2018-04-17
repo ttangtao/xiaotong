@@ -1,0 +1,2 @@
+/* pages/approvalCenter/LeaveApproval/LeaveApproval.wxss */
+@import '../askLeave/askLeave.wxss';

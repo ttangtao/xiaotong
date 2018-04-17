@@ -1,5 +1,3 @@
-<!--pages/myApply/myApply.wxml-->
-<!--pages/todoWork/todoWork.wxml-->
 <view>
   <view class='header'>
     <picker class='tab' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">

@@ -1,8 +1,9 @@
-<!--pages/payment/payment.wxml-->
+<!--pages/askLeave/askLeave.wxml-->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{projectBelongs==='请选择'}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>项目归属</text>
@@ -10,131 +11,175 @@
   </view>
   <view class='flex'>
     <picker data-kind='projectBelongs' bindchange="bindPickerChange" value="{{projectBelongs}}" range="{{projectBelongsAry}}">
-      <view class="picker">
-        {{projectBelongs}}
+      <view class='flex'>
+        <view class="picker">
+          {{projectBelongs}}
+        </view>
+        <view class='icon2'>
+          <image src='../img/right.png'></image>
+        </view>
       </view>
     </picker>
-    <view class='fxCls'>
-      <image src='../img/right.png'></image>
-    </view>
   </view>
 </view>
 
 <view class='askTishi flex'>
-  <text>本月已申请{{sqDays}}元</text>
+  <text>本月已经付款{{sqDays}}元</text>
   <text>我的付款</text>
 </view>
 
+<!--费用类型  -->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{moneyType==='请选择'}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>费用类型</text>
     </view>
   </view>
   <view class='flex'>
-    <picker data-kind='projectBelongs' bindchange="bindPickerChange" value="{{projectBelongs}}" range="{{projectBelongsAry}}">
-      <view class="picker">
-        {{projectBelongs}}
+    <picker data-kind='moneyType' bindchange="bindPickerChange" value="{{moneyType}}" range="{{moneyTypeAry}}">
+      <view class='flex'>
+        <view class="picker">
+          {{moneyType}}
+        </view>
+        <view class='icon2'>
+          <image src='../img/right.png'></image>
+        </view>
       </view>
     </picker>
-    <view class='fxCls'>
-      <image src='../img/right.png'></image>
-    </view>
   </view>
 </view>
+
+<!--费用金额  -->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{money===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
-      <text>费用金额（元）</text>
+      <text>费用金额</text>
     </view>
   </view>
-  <view class='flex inputCls'>
-      <input></input>
+  <view class='inputCls'>
+    <input data-kind='money' bindinput='bindInput' placeholder='请输入' value='{{money}}'></input>
   </view>
 </view>
 
-<view class='sec_picker'>
-  <view class="section">
-    <view class="section__title">支付日期</view>
-    <picker data-kind='endDate' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{endDate}}">
-      <view class="picker flex">
-        <view>
-          <text>{{endDate}}</text>
-        </view>
-        <view class='fxCls'>
-          <image src='../img/bottom.png'></image>
-        </view>
-      </view>
-    </picker>
-  </view>
-   <view class="section">
-    <view class="section__title">支付对象</view>
-    <picker data-kind='endDate' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{endDate}}">
-      <view class="picker flex">
-        <view>
-          <text>{{endDate}}</text>
-        </view>
-        <view class='fxCls'>
-          <image src='../img/bottom.png'></image>
-        </view>
-      </view>
-    </picker>
-  </view>
-</view>
-
+<!--支付日期  -->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{paymentDate==='请选择'}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>支付日期</text>
+    </view>
+  </view>
+  <view class='flex'>
+    <picker data-kind='paymentDate' mode="date" value="{{paymentDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindPickerChange">
+      <view class='flex'>
+        <view class="picker">
+          {{paymentDate}}
+        </view>
+        <view class='icon2'>
+          <image src='../img/right.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<!--支付对象  -->
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='icon1'>
+      <image wx:if="{{PayObject==='请选择'||PayObject===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
+    </view>
+    <view class='row_text'>
+      <text>支付对象</text>
+    </view>
+  </view>
+  <view class='flex'>
+
+    <view wx:if="{{PayObjectMethod==='input'}}" class='inputCls'>
+      <input placeholder='请输入' data-kind='PayObject' bindinput='bindInput' value='{{PayObject}}'></input>
+    </view>
+
+    <picker wx:if="{{PayObjectMethod==='picker'}}" data-kind='PayObject' bindchange="bindPickerChange" value="{{PayObject}}" range="{{PayObjectAry}}">
+      <view class='flex'>
+        <view class="picker">
+          {{PayObject}}
+        </view>
+        <view class='icon2'>
+          <image src='../img/right.png'></image>
+        </view>
+      </view>
+    </picker>
+
+  </view>
+</view>
+
+<!--开户行  -->
+<view class='askL_row flex'>
+  <view class='flex'>
+    <view class='icon1'>
+      <image wx:if="{{account===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>开户行</text>
     </view>
   </view>
-  <view class='flex inputCls'>
-      <input></input>
+  <view class='inputCls'>
+    <input data-kind='account' bindinput='bindInput' placeholder='请输入' value='{{account}}'></input>
   </view>
 </view>
 
+<!--银行账号  -->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{bankNum===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>银行账号</text>
     </view>
   </view>
-  <view class='flex inputCls'>
-      <input></input>
+  <view class='inputCls'>
+    <input data-kind='bankNum' bindinput='bindInput' placeholder='请输入' value='{{bankNum}}'></input>
   </view>
 </view>
 
+<!--开户地  -->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{bankPle===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>开户地</text>
     </view>
   </view>
-  <view class='flex inputCls'>
-      <input></input>
+  <view class='inputCls'>
+    <input data-kind='bankPle' bindinput='bindInput' placeholder='请输入' value='{{bankPle}}'></input>
   </view>
 </view>
 
 
+
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{reason===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>事由</text>
@@ -144,25 +189,27 @@
 
 <view class='reasonBox'>
   <view class='reason'>
-    <textarea auto-height value='{{reason}}'></textarea>
+    <textarea auto-height placeholder='这里填写事由' bindinput='bindInput' data-kind='area' value='{{reason}}'></textarea>
   </view>
 </view>
-
 <view bindtap='uploadPic' class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{uploadSrc}}" src='../img/start2.png'></image>
+      <image wx:else src='../img/start.png'></image>
     </view>
     <view class='row_text'>
       <text>图片</text>
     </view>
   </view>
-  <view class='fxCls'>
+  <view class='icon2'>
     <image src='../img/add.png'></image>
   </view>
 </view>
 
-<view class='uploadPic'><image src='{{uploadSrc}}'></image></view>
+<view wx:if="{{uploadSrc}}" class='uploadPic'>
+  <image src='{{uploadSrc}}'></image>
+</view>
 
 <view style='height:150rpx'></view>
 <view>

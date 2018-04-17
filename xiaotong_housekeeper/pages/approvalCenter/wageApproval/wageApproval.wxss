@@ -1,0 +1,15 @@
+/* pages/approvalCenter/wageApproval/wageApproval.wxss */
+@import "../askLeave/askLeave.wxss";
+.colorRow{
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+}
+.colorRow>text{
+  color: #30c37d;
+  font-size: 28rpx;
+}
+.table{
+  padding: 20rpx;
+  height: 400rpx;
+  background: #30c37d;
+}

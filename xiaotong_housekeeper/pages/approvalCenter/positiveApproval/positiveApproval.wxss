@@ -1,0 +1,2 @@
+/* pages/approvalCenter/positiveApproval/positiveApproval.wxss */
+@import '../askLeave/askLeave.wxss'

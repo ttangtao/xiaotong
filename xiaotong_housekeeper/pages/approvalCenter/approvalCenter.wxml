@@ -1,0 +1,54 @@
+<view>
+  <view class='header'>
+    <picker class='tab' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class='Intab'>
+        <view>
+          <text>类型</text>
+        </view>
+        <view class='icon2'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+    <picker class='tab tab2' mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class='Intab'>
+        <view>
+          <text>时间</text>
+        </view>
+        <view class='icon2'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+    <picker class='tab' mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class='Intab'>
+        <view>
+          <text>状态</text>
+        </view>
+        <view class='icon2'>
+          <image src='../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view>
+    <view wx:for="{{list}}" wx:key="{{index}}" class="itemWrap" bindtap='toDetail'>
+      <view class='icon2'>
+        <image src='../img/brush_fill.png'></image>
+      </view>
+      <view class='contentWrap'>
+        <view class='left_todo'>
+          <text class='title'>{{item.type}}</text>
+          <view class='date'>
+            <text>{{item.description}}</text>
+          </view>
+          <text>{{item.status}}</text>
+        </view>
+      </view>
+      <view class='right_todo'>
+        <text>{{item.date}}</text>
+        <text>由{{item.name}}审批</text>
+      </view>
+    </view>
+  </view>
+</view>

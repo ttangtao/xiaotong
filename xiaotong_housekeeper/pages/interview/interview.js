@@ -85,6 +85,12 @@ Page({
       inputVal: e.detail.value
     });
   },
+  //跳转详情按钮
+  candidetelInfoBtn(e){
+    wx.navigateTo({
+      url: './candidateInfo/candidateInfo',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -59,6 +59,8 @@ image {
   overflow: hidden;
   margin:10rpx 0 20rpx;
   border:1rpx solid #ccc;
+  border-right-width: 0;
+  border-left-width: 0;
 }
 .qz_title{
   font-size: 36rpx;

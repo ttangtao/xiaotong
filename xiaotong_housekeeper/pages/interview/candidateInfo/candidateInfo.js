@@ -18,7 +18,7 @@ Page({
   // 面试记录
   VisitRecordBtn(){
     wx.navigateTo({
-      url: '../../visit/ExternalContact/ExternalCon_record/ExternalCon_record',
+      url: '../../visit/ExternalContact/ExternalCon_record/ExternalCon_record?id='+'面试',
     })
   },
   /**

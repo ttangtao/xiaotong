@@ -1,0 +1,84 @@
+<view>
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<view hidden="{{currentTab!==0}}">
+   <view>
+    <view wx:for="{{1}}" wx:key="{{index}}" class="itemWrap" bindtap='toDetail'>
+      <view style='width:120rpx;font-weight:700'>
+        <text>xx部门</text>
+      </view>
+      <view class='row_2'>
+        <view>
+          <text>上级部门:</text>
+          <text>xxx</text>
+        </view>
+        <view>
+          <text>本月工资:</text>
+          <text>xxx</text>
+        </view>
+        <view>
+          <text>本月人数:</text>
+          <text>xxx</text>
+        </view>
+      </view>
+      <view class='row_3'>
+        <view>
+          <text>上月工资:</text>
+          <text>xxx</text>
+        </view>
+        <view>
+          <text>上月人数:</text>
+          <text>xxx</text>
+        </view>
+      </view>
+      <view class='icon2'>
+        <image src='../../../img/right.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view hidden="{{currentTab!==1}}">
+   <view>
+    <view wx:for="{{2}}" wx:key="{{index}}" class="itemWrap" bindtap='toDetail'>
+      <view style='width:120rpx;font-weight:700'>
+        <text>xx部门</text>
+      </view>
+      <view class='row_2'>
+        <view>
+          <text>上级部门:</text>
+          <text>xxx</text>
+        </view>
+        <view>
+          <text>本月工资:</text>
+          <text>xxx</text>
+        </view>
+        <view>
+          <text>本月人数:</text>
+          <text>xxx</text>
+        </view>
+      </view>
+      <view class='row_3'>
+        <view>
+          <text>上月工资:</text>
+          <text>xxx</text>
+        </view>
+        <view>
+          <text>上月人数:</text>
+          <text>xxx</text>
+        </view>
+      </view>
+      <view class='icon2'>
+        <image src='../../../img/right.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+</view>

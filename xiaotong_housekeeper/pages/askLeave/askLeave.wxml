@@ -1,8 +1,9 @@
 <!--pages/askLeave/askLeave.wxml-->
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{projectBelongs==='请选择'}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>项目归属</text>
@@ -14,7 +15,7 @@
         {{projectBelongs}}
       </view>
     </picker>
-    <view class='fxCls'>
+    <view class='icon2'>
       <image src='../img/right.png'></image>
     </view>
   </view>
@@ -22,8 +23,9 @@
 
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{askDayType==='请选择'}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>请假类型</text>
@@ -35,7 +37,7 @@
         {{askDayType}}
       </view>
     </picker>
-    <view class='fxCls'>
+    <view class='icon2'>
       <image src='../img/right.png'></image>
     </view>
   </view>
@@ -49,13 +51,21 @@
 <!--picker  -->
 <view class='sec_picker'>
   <view class="section">
-    <view class="section__title">开始日期</view>
+    <view class="section__title flex">
+      <view class='icon1'>
+        <image wx:if="{{beginDate==='日期'}}" src='../img/start.png'></image>
+        <image wx:else src='../img/start2.png'></image>
+      </view>
+      <view>
+        <text>开始日期</text>
+      </view>
+    </view>
     <picker mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" data-kind='beginDate' value="{{beginDate}}">
       <view class="picker flex">
         <view>
           <text>{{beginDate}}</text>
         </view>
-        <view class='fxCls'>
+        <view class='icon2'>
           <image src='../img/bottom.png'></image>
         </view>
       </view>
@@ -65,7 +75,7 @@
         <view>
           <text>{{beginType}}</text>
         </view>
-        <view class='fxCls'>
+        <view class='icon2'>
           <image src='../img/bottom.png'></image>
         </view>
       </view>
@@ -75,13 +85,21 @@
 
   </view>
   <view class="section">
-    <view class="section__title">结束日期</view>
+    <view class="section__title flex">
+      <view class='icon1'>
+        <image wx:if="{{endDate==='日期'}}" src='../img/start.png'></image>
+        <image wx:else src='../img/start2.png'></image>
+      </view>
+      <view>
+        <text>结束日期</text>
+      </view>
+    </view>
     <picker data-kind='endDate' mode="date" start="1900-01-01" end="2018-04-08" bindchange="bindPickerChange" value="{{endDate}}">
       <view class="picker flex">
         <view>
           <text>{{endDate}}</text>
         </view>
-        <view class='fxCls'>
+        <view class='icon2'>
           <image src='../img/bottom.png'></image>
         </view>
       </view>
@@ -91,7 +109,7 @@
         <view>
           <text>{{endType}}</text>
         </view>
-        <view class='fxCls'>
+        <view class='icon2'>
           <image src='../img/bottom.png'></image>
         </view>
       </view>
@@ -101,22 +119,21 @@
 
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
-    </view>
     <view class='row_text'>
       <text>申请天数(天)</text>
     </view>
   </view>
   <view style='font-size:32rpx;color:#555;'>
-    <text>{{jsDays}}天</text>
+    <text style='color:#30c37d;margin-right:10rpx;font-size:40rpx'>{{jsDays}}</text>
+    <text>天</text>
   </view>
 </view>
 
 <view class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{reason===''}}" src='../img/start.png'></image>
+      <image wx:else src='../img/start2.png'></image>
     </view>
     <view class='row_text'>
       <text>事由</text>
@@ -126,24 +143,27 @@
 
 <view class='reasonBox'>
   <view class='reason'>
-    <textarea auto-height value='{{reason}}'></textarea>
+    <textarea auto-height placeholder='这里填写事由' bindinput='changeEvent' value='{{reason}}'></textarea>
   </view>
 </view>
 <view bindtap='uploadPic' class='askL_row flex'>
   <view class='flex'>
-    <view class='fxCls'>
-      <image src='../img/start.png'></image>
+    <view class='icon1'>
+      <image wx:if="{{uploadSrc}}" src='../img/start2.png'></image>
+      <image wx:else src='../img/start.png'></image>
     </view>
     <view class='row_text'>
       <text>图片</text>
     </view>
   </view>
-  <view class='fxCls'>
+  <view class='icon2'>
     <image src='../img/add.png'></image>
   </view>
 </view>
 
-<view class='uploadPic'><image src='{{uploadSrc}}'></image></view>
+<view  wx:if="{{uploadSrc}}" class='uploadPic'>
+  <image src='{{uploadSrc}}'></image>
+</view>
 
 <view style='height:150rpx'></view>
 <view>

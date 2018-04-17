@@ -1,14 +1,14 @@
 <!--pages/visit/ExternalContact/ExternalCon_record/ExternalCon_record.wxml-->
-<view wx:for="{{5}}" class='row flex weui-check__label'>
+<view wx:for="{{fillList}}" class='row flex weui-check__label'>
   <view>
-    <text>2018-01-01</text>
+    <text>{{item.date}}</text>
   </view>
   <view>
     <view>
-      <text>xx拜访事宜</text>
+      <text>{{item.key1}}</text>
     </view>
     <view>
-      <text>xx拜访方式</text>
+      <text>{{item.key2}}</text>
     </view>
   </view>
   <view class='flex'>

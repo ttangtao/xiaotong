@@ -1,0 +1,16 @@
+/* pages/approvalCenter/approvalOpinion/approvalOpinion.wxss */
+.areaCls{
+  width: 100%;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+  font-size: 32rpx;
+  color: #555;
+}
+
+.otherButtonCls {
+  border-radius: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

@@ -8,9 +8,6 @@ Page({
     // 项目类型
     projectBelongs: '请选择',
     projectBelongsAry: ['项目类型1', '项目类型2', '项目类型3'],
-    // 补偿方式
-    CompensationMode: '请选择',
-    CompensationModeAry: ['补偿方式1', '补偿方式2', '补偿方式3'],
 
     // 开始
     beginDate: '日期',
@@ -29,7 +26,7 @@ Page({
     jsDays: 0,
 
     // 事由
-    reason: "这里是事由",
+    reason: "",
 
     // 上传图片的地址
     uploadSrc: ''
@@ -37,19 +34,10 @@ Page({
   //上传图片函数
   uploadPic() {
     wx.chooseImage({
-      success: function (res) {
+      success: (res) => {
         var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
+        this.setData({
+          uploadSrc: tempFilePaths[0]
         })
       }
     })
@@ -65,9 +53,9 @@ Page({
           projectBelongs: this.data.projectBelongsAry[value]
         }); break;
       }
-      case "CompensationMode": {
+      case "askDayType": {
         this.setData({
-          CompensationMode: this.data.CompensationModeAry[value]
+          askDayType: this.data.askDayTypeAry[value]
         }); break;
       }
       case "beginDate": {
@@ -90,6 +78,24 @@ Page({
           endType: this.data.endTypeAry[value]
         }); break;
       }
+
+    }
+  },
+  // area值改变
+  changeEvent(e) {
+    let newValue = e.detail.value;
+    this.setData({
+      reason: newValue
+    })
+  },
+  // 提交按钮
+  saveBtn() {
+    //todo 检查所有信息是否填写完整
+    if (true) {
+      wx.navigateBack({
+        delta: 1,
+      })
+    } else {
 
     }
   },

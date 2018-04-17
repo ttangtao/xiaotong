@@ -1,0 +1,89 @@
+<!--pages/approvalCenter/AgreeInduction/AgreeInduction.wxml-->
+<view style='padding:10rpx' class='flex'>
+  <view class='icon1'>
+    <image src='../../img/start2.png'></image>
+  </view>
+  <view>
+    <text>工作安排</text>
+  </view>
+</view>
+
+<view class='row flex'>
+  <view>
+    <text>部门</text>
+  </view>
+  <view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker flex">
+        <view>
+          <text>{{}}</text>
+        </view>
+        <view class='icon2'>
+          <image src='../../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class='row flex'>
+  <view>
+    <text>职位</text>
+  </view>
+  <view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker flex">
+        <view>
+          <text>{{}}</text>
+        </view>
+        <view class='icon2'>
+          <image src='../../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class='row flex'>
+  <view>
+    <text>转正日期</text>
+  </view>
+  <view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker flex">
+        <view>
+          <text>{{}}</text>
+        </view>
+        <view class='icon2'>
+          <image src='../../img/bottom.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view>
+  <view class='flex row otherRow'>
+    <view>
+      <text>事由</text>
+    </view>
+  </view>
+  <view>
+    <textarea class='areaCls' value='{{areaValue}}'></textarea>
+  </view>
+</view>
+
+<view>
+  <view class='flex row otherRow'>
+    <view>
+      <text>图片</text>
+    </view>
+  </view>
+  <view style='padding:10rpx;' class='icon2'>
+    <image src='../../img/add.png'></image>
+  </view>
+</view>
+<view style='height:150rpx'></view>
+<view>
+  <button bindtap='saveBtn' class='ptButton otherButtonCls' hover-class="ptButtonHover">提交</button>
+</view>

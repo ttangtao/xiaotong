@@ -13,7 +13,6 @@
 .askTishi>text:last-child{
   color: #30c37d
 }
-
 .reasonBox{
   background: #fff;
 }

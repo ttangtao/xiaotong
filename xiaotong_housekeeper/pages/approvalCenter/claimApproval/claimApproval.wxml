@@ -1,0 +1,67 @@
+<view class='flex otherOptions'>
+  <text style='color:#30c37d'>本月已报销(元)</text>
+  <text style='color:#30c37d'>0</text>
+</view>
+<view class='flex otherOptions'>
+  <text style='color:#30c37d'>上月已报销(元)</text>
+  <text style='color:#30c37d'>0</text>
+</view>
+
+<view>
+  <view wx:for="{{row2List}}" wx:key="{{index}}" class='flex row otherRow'>
+    <text>{{item.key}}</text>
+    <text>{{item.value}}</text>
+  </view>
+</view>
+
+<view>
+  <view class='flex row otherRow'>
+    <view>
+      <text>事由</text>
+    </view>
+  </view>
+  <view>
+    <textarea class='areaCls' value='{{areaValue}}'></textarea>
+  </view>
+</view>
+
+<view>
+  <view class='flex row otherRow'>
+    <view>
+      <text>发票图片</text>
+    </view>
+  </view>
+  <view class='picCls'>
+    <image src='{{}}'></image>
+  </view>
+</view>
+
+<view>
+  <view wx:for="{{5}}" wx:key="{{index}}" class='sh_row'>
+    <view class='flex'>
+      <view class='sh_head'>
+        <image></image>
+      </view>
+      <view class='sh_name'>
+        <text>马云</text>
+      </view>
+      <view class='sh_state'>
+        <text>发起申请</text>
+      </view>
+      <view>
+        <text>03.08 </text>
+        <text>10:36</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='operation'>
+  <view>
+    <button bindtap='preBtn' class='pre' hover-class='perHover'>拒绝</button>
+  </view>
+  <view>
+    <button bindtap='nextBtn' class='next' hover-class='nextHover'>同意</button>
+  </view>
+</view>
+<view style='height:200rpx;'></view>

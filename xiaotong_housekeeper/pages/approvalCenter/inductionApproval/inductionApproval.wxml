@@ -1,0 +1,158 @@
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<!--简历信息-->
+<view hidden="{{currentTab!==0}}">
+  <view class='bigBox'>
+    <view class='Res_pre_head'>
+      <view class='headPic'>
+        <image></image>
+      </view>
+      <view class='head_Info'>
+        <view class='res_pre_title'>
+          <text>唐涛</text>
+        </view>
+        <view class='res_pre_info'>
+          <view style='width:120rpx;'>
+            <text>性别:</text>
+            <text>男</text>
+          </view>
+          <view class='res_pre_border'>
+            <text>最高学历:</text>
+            <text>本科</text>
+          </view>
+        </view>
+        <view class='res_pre_info'>
+          <view style='width:120rpx;'>
+            <text>年龄:</text>
+            <text>24</text>
+          </view>
+          <view class='res_pre_border'>
+            <text>工作年限:</text>
+            <text>3年</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 基本信息 -->
+    <view>
+      <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+        <text>{{item.key}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+    <!--项目经历  -->
+    <view class='proL_title'>
+      <text>项目经历</text>
+    </view>
+    <view wx:for="{{2}}" wx:key="{{index}}" class='rp_projectList'>
+      <view class='rp_pl_top'>
+        <view class='pl_left'>
+          <text>2017年1月1日</text>
+          <text>到</text>
+          <text>2018年1月1日</text>
+        </view>
+        <view class='pl_right'>
+          <text>XX省XX市</text>
+        </view>
+      </view>
+      <view class='rp_pl_row'>
+        <view class='rp_pl_sRow'>
+          <text>广州移动优化</text>
+        </view>
+        <view class='rp_pl_sRow rp_pl_sRow_border'>
+          <text>后台分析工程师</text>
+        </view>
+      </view>
+      <view class='rp_pl_row'>
+        <view class='rp_pl_sRow'>
+          <text>移动</text>
+        </view>
+        <view class='rp_pl_sRow'>
+          <text>华为</text>
+        </view>
+        <view class='rp_pl_sRow rp_pl_sRow_border'>
+          <text>TD-LTE</text>
+        </view>
+      </view>
+      <view class='rp_responsibilities'>
+        <text class='rp_responsibilities_title'>项目职责:</text>
+        <text class='rp_responsibilities_text'>2222222222222222</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='operation'>
+    <view>
+      <button bindtap='preBtn' class='pre' hover-class='perHover'>上一步</button>
+    </view>
+    <view>
+      <button bindtap='nextBtn' class='next' hover-class='nextHover'>提交</button>
+    </view>
+  </view>
+  <view style='height:200rpx;'></view>
+
+
+</view>
+
+<!--其他信息-->
+<view hidden="{{currentTab!==1}}">
+  <view style='margin-bottom:20rpx'>
+    <view style='padding:10rpx' class='flex'>
+      <view class='icon1'>
+        <image src='../../img/start2.png'></image>
+      </view>
+      <view>
+        <text>银行卡信息</text>
+      </view>
+    </view>
+    <view>
+      <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+        <text>{{item.key}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+  <view style='margin-bottom:20rpx'>
+    <view style='padding:10rpx' class='flex'>
+      <view class='icon1'>
+        <image src='../../img/start2.png'></image>
+      </view>
+      <view>
+        <text>紧急联系人</text>
+      </view>
+    </view>
+    <view>
+      <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+        <text>{{item.key}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--个人材料-->
+<view hidden="{{currentTab!==2}}">
+  <view style='margin-bottom:20rpx'>
+    <view style='padding:10rpx' class='flex'>
+      <view class='icon1'>
+        <image src='../../img/start2.png'></image>
+      </view>
+      <view>
+        <text>个人材料</text>
+      </view>
+    </view>
+    <view>
+      <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
+        <view>
+          <text>{{item.key}}</text>
+        </view>
+        <view>
+          <image src=''></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

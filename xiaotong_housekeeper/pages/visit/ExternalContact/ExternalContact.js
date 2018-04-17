@@ -16,7 +16,7 @@ Page({
   //跳转到拜访记录
   VisitRecordBtn(e) {
     wx.navigateTo({
-      url: './ExternalCon_record/ExternalCon_record'
+      url: './ExternalCon_record/ExternalCon_record?id='+'拜访'
     })
   },
   //跳转到编辑界面

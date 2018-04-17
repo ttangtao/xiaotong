@@ -49,15 +49,14 @@
 .uploadPic{
   margin: 20rpx auto;
   width: 90%;
-  height: 400rpx;
-  background: #30c37d
+  height: 400rpx
 }
 .inputCls{
   border: 1rpx solid #ccc;
   width: 200rpx;
 }
 .inputCls>input{
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: #555;
   padding: 0 10rpx;
 }

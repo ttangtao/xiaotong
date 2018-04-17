@@ -8,9 +8,9 @@ Page({
     // 项目类型
     projectBelongs: '请选择',
     projectBelongsAry: ['项目类型1', '项目类型2', '项目类型3'],
-    // 请假类型
-    askDayType: '请选择',
-    askDayTypeAry: ['请假类型1', '请假类型2', '请假类型3'],
+    // 费用类型
+    moneyType: '请选择',
+    moneyTypeAry: ['费用类型1', '费用类型2', '费用类型3'],
 
     // 开始
     beginDate: '日期',
@@ -25,6 +25,9 @@ Page({
     //申请天数
     sqDays: 0,
 
+    // 费用金额
+    money: '',
+
     //剩余天数
     syDays: 0,
 
@@ -32,27 +35,25 @@ Page({
     jsDays: 0,
 
     // 事由
-    reason: "这里是事由",
+    reason: "",
 
     // 上传图片的地址
     uploadSrc: ''
   },
+  //改变金额
+  moneyEvent(e) {
+    let newValue = e.detail.value;
+    this.setData({
+      money: newValue
+    })
+  },
   //上传图片函数
   uploadPic() {
     wx.chooseImage({
-      success: function (res) {
+      success: (res) => {
         var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
+        this.setData({
+          uploadSrc: tempFilePaths[0]
         })
       }
     })
@@ -68,9 +69,9 @@ Page({
           projectBelongs: this.data.projectBelongsAry[value]
         }); break;
       }
-      case "askDayType": {
+      case "moneyType": {
         this.setData({
-          askDayType: this.data.askDayTypeAry[value]
+          moneyType: this.data.moneyTypeAry[value]
         }); break;
       }
       case "beginDate": {
@@ -94,6 +95,21 @@ Page({
         }); break;
       }
 
+    }
+  },
+  //area
+  areaEvent(e) {
+    let newValue = e.detail.value;
+    this.setData({
+      reason: newValue
+    })
+  },
+  // 提交按钮
+  saveBtn() {
+    if (true) {
+      wx.navigateBack({
+        delta: 1
+      })
     }
   },
   /**

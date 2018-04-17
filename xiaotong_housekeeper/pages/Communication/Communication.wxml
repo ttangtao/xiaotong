@@ -26,7 +26,7 @@
 
   <view wx:if="{{currentTab==0}}" class='rankWrap'>
     <view class="weui-cells weui-cells_after-title">
-      <view bindchange='checkboxChange' wx:for="{{checkboxItems}}" wx:key="value" class='row_lp weui-check__label'>
+      <view bindtap='checkboxChange' data-row='{{item}}' wx:for="{{checkboxItems}}" wx:key="{{index}}" class='row_lp weui-check__label'>
         <label class="weui-cell">
           <view class="weui-cell__bd">
             {{item.name}}
@@ -41,7 +41,7 @@
   </view>
   <view wx:if="{{currentTab==1}}" class='rankWrap'>
     <view class="weui-cells weui-cells_after-title">
-      <view bindchange='checkboxChange' wx:for="{{checkboxItems}}" wx:key="value" class='row_lp weui-check__label'>
+      <view bindtap='checkboxChange' data-row='{{item}}' wx:for="{{checkboxItems2}}" wx:key="{{index}}" class='row_lp weui-check__label'>
         <label class="weui-cell">
           <view class="weui-cell__bd">
             {{item.name}}
@@ -57,10 +57,11 @@
 
   <view style='height:160rpx'></view>
 
-  <view class='footer_lp'>
+  <!--选择人数  -->
+  <!-- <view class='footer_lp'>
     <text class='selectNum'>已选择：10人</text>
     <view class='sureBtn'>
       <button class='ptButton' hover-class='ptButtonHover' bindtap='toRelease'>确 定</button>
     </view>
-  </view>
+  </view> -->
 </view>

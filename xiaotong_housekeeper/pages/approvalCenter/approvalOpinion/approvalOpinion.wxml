@@ -1,0 +1,25 @@
+<!--pages/approvalCenter/approvalOpinion/approvalOpinion.wxml-->
+<view style='padding:10rpx;' class='flex'>
+  <view class='icon1'>
+    <image src='../../img/start2.png'></image>
+  </view>
+  <view style='margin-left:10rpx;'>
+    <text>审批意见</text>
+  </view>
+</view>
+<view class='areaCls'>
+  <textarea></textarea>
+</view>
+<view style='padding:10rpx;'>
+  <view>
+    <text>图片</text>
+  </view>
+  <view class='icon2'>
+    <image src='../../img/add.png'></image>
+  </view>
+</view>
+
+<view style='height:150rpx'></view>
+<view>
+  <button bindtap='saveBtn' class='ptButton otherButtonCls' hover-class="ptButtonHover">提交</button>
+</view>

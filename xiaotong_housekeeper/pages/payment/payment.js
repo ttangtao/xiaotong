@@ -8,31 +8,35 @@ Page({
     // 项目类型
     projectBelongs: '请选择',
     projectBelongsAry: ['项目类型1', '项目类型2', '项目类型3'],
-    // 请假类型
-    askDayType: '请选择',
-    askDayTypeAry: ['请假类型1', '请假类型2', '请假类型3'],
 
-    // 开始
-    beginDate: '日期',
-    beginType: '全天',
-    beginTypeAry: ['全天', '半天'],
+    // 费用类型
+    moneyType: '请选择',
+    moneyTypeAry: ['费用类型1', '费用类型2', '费用类型3'],
 
-    // 结束
-    endDate: '日期',
-    endType: '全天',
-    endTypeAry: ['全天', '半天'],
+    // 费用
+    money: '',
 
+    //支付日期
+    paymentDate: '请选择',
+
+    // 支付对象
+    PayObject: '请选择',
+    PayObjectAry: ["手动输入", "支付对象1", "支付对象2", "支付对象3"],
+    PayObjectMethod: 'picker',
+    // 开户行
+    account: '',
+    // 银行账号
+    bankNum: '',
+    // 开户地
+    bankPle: '',
     //申请天数
     sqDays: 0,
-
-    //剩余天数
-    syDays: 0,
 
     // 经过计算获得的天数
     jsDays: 0,
 
     // 事由
-    reason: "这里是事由",
+    reason: "",
 
     // 上传图片的地址
     uploadSrc: ''
@@ -40,19 +44,10 @@ Page({
   //上传图片函数
   uploadPic() {
     wx.chooseImage({
-      success: function (res) {
+      success: (res) => {
         var tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
+        this.setData({
+          uploadSrc: tempFilePaths[0]
         })
       }
     })
@@ -68,31 +63,79 @@ Page({
           projectBelongs: this.data.projectBelongsAry[value]
         }); break;
       }
-      case "askDayType": {
+      case "moneyType": {
         this.setData({
-          askDayType: this.data.askDayTypeAry[value]
+          moneyType: this.data.moneyTypeAry[value]
         }); break;
       }
-      case "beginDate": {
+
+      case "paymentDate": {
         this.setData({
-          beginDate: value
+          paymentDate: value
         }); break;
       }
-      case "beginType": {
-        this.setData({
-          beginType: this.data.beginTypeAry[value]
-        }); break;
+      case "PayObject": {
+        if (this.data.PayObjectAry[value] === '手动输入') {
+          this.setData({
+            PayObject: '',
+            PayObjectMethod: 'input'
+          });
+        } else {
+          this.setData({
+            PayObject: this.data.PayObjectAry[value]
+          });
+        }
+        break;
       }
-      case "endDate": {
+    }
+  },
+  // 改变input函数
+  bindInput(e) {
+    let newValue = e.detail.value;
+    let kind = e.currentTarget.dataset.kind;
+    switch (kind) {
+      case "money":
         this.setData({
-          endDate: value
-        }); break;
-      }
-      case "endType": {
+          money: newValue
+        })
+        break;
+      case "PayObject":
         this.setData({
-          endType: this.data.endTypeAry[value]
-        }); break;
-      }
+          PayObject: newValue
+        })
+        break;
+      case "account":
+        this.setData({
+          account: newValue
+        })
+        break;
+      case "bankNum":
+        this.setData({
+          bankNum: newValue
+        })
+        break;
+      case "bankPle":
+        this.setData({
+          bankPle: newValue
+        })
+        break;
+      case "area":
+        this.setData({
+          reason: newValue
+        })
+        break;
+      default:
+        break;
+    }
+  },
+  // 提交按钮
+  saveBtn() {
+    //todo 检查所有信息是否填写完整
+    if (true) {
+      wx.navigateBack({
+        delta: 1,
+      })
+    } else {
 
     }
   },
