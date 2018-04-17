@@ -55,12 +55,12 @@ image {
 /*块状区域  */
 .qz_box{
   background-color:#fff;
-  padding: 20rpx 10rpx 0;
+  padding: 20rpx 0;
   overflow: hidden;
-  margin:10rpx 0 20rpx;
+  margin:10rpx 20rpx 20rpx;
   border:1rpx solid #ccc;
-  border-right-width: 0;
-  border-left-width: 0;
+  /* border-right-width: 0;
+  border-left-width: 0; */
 }
 .qz_title{
   font-size: 36rpx;
