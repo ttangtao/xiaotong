@@ -26,7 +26,7 @@
 </view>
 <!--功能条  -->
 <view class='Feature'>
-  <view wx:for="{{renderList}}" wx:key="{{index}}" class='row'>
+  <view wx:for="{{renderList}}" wx:key="{{index}}" class='row weui-check__label'>
     <view class='left'>
       <view class='icon'>
         <image src='{{item.src}}'></image>

@@ -72,7 +72,6 @@
 </view>
 
 <view>
-
   <view wx:if="{{id_status==='拜访'}}" class='flex row'>
     <view class='flex'>
       <view class='icon1'>
