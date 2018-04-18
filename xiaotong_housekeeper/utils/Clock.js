@@ -1,13 +1,26 @@
 var QQMapWX = require('./qqmap-wx-jssdk.min.js');
 
-class Common {
+class Clock {
   constructor() {
     this.qqmapsdk = new QQMapWX({
       key: 'ZMCBZ-CPDW6-IRUSJ-MFSHE-DABGS-HAFGR'//此处使用你自己申请的key  
     });
+    // 上班有效时间
+    this.up_time = null;
+    // 上班有效时间
+    this.up_time = null;
+    // 地址
+    this.address = null;
+    // 时间
+    this.time = new Date().toTimeString().split(' ')[0]
+  }
+  resetTime() {
+    this.time = new Date().toTimeString().split(' ')[0]
   }
 
-  _getLocation() {
+  //获取地点
+  getLocation() {
+    this.resetTime();
     wx.getLocation({
       type: 'wgs84',
       success: (suc) => {
@@ -16,9 +29,8 @@ class Common {
             latitude: Number(suc.latitude),
             longitude: Number(suc.longitude)
           },
-          success: function (res) {
-            console.log(res.result.address)
-            return res.result.address
+          success: (res) => {
+            this.address = res.result
           }, fail: function (res) {
             console.log("定位失败", res);
           }
@@ -29,9 +41,16 @@ class Common {
       }
     })
   }
+
+  //状态判定
+  getState(upWork_time, downWork_time, scope) {
+    
+    console.log(upWork_time, downWork_time, downWork_time)
+  }
+
+
 }
 
+const clock = new Clock();
 
-const common = new Common();
-
-export default common;
+export default clock

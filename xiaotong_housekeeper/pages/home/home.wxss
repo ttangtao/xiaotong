@@ -1,77 +1,96 @@
 /* pages/home/home.wxss */
+
 /*  */
-.box{
+
+.box {
   font-size: 28rpx;
   margin: 20rpx;
   border: 1rpx solid #ddd;
   border-radius: 6rpx;
-  padding:20rpx;
+  padding: 20rpx;
   background: #fff;
   color: #333;
-  box-shadow: 0rpx 4rpx 4rpx rgba(150, 150, 150, .2);
+  box-shadow: 0rpx 4rpx 4rpx rgba(150, 150, 150, 0.2);
 }
+
 .icon {
   width: 40rpx;
   height: 40rpx;
   margin-right: 30rpx;
 }
-.box_top{
+
+.box_top {
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
 }
-.b_top_left{
+
+.b_top_left {
   display: flex;
   align-items: center;
 }
-.allBtn{
+
+.allBtn {
   color: steelblue;
   text-decoration: underline;
   font-size: 24rpx;
 }
-.box_bottom{
-  padding:20rpx 50rpx;
+
+.box_bottom {
+  padding: 20rpx 50rpx;
   padding-bottom: 10rpx;
 }
-.b_bottom_top{
+
+.b_bottom_top {
   font-weight: bold;
 }
-.b_bottom_bottom{
+
+.b_bottom_bottom {
   text-decoration: underline;
   padding-left: 70rpx;
 }
-.b_bottom_top,.b_bottom_bottom{
+
+.b_bottom_top, .b_bottom_bottom {
   margin: 10rpx 0;
   display: flex;
   align-items: center;
 }
+
 /*  */
-.work{
+
+.work {
   background: #fff;
   margin: 0 20rpx;
   padding: 10rpx 0;
   border: 1rpx solid #ddd;
   border-radius: 6rpx;
-  box-shadow: 0rpx 4rpx 4rpx rgba(150, 150, 150, .2);
+  box-shadow: 0rpx 4rpx 4rpx rgba(150, 150, 150, 0.2);
 }
-.work_all{
+
+.work_all {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 40rpx 0;
 }
-.w_right_top,.w_right_bottom{
+
+.w_right_top, .w_right_bottom {
   display: flex;
   align-items: center;
   font-size: 26rpx;
 }
-.icon2{
+
+.icon2 {
   width: 40rpx;
   height: 40rpx;
   margin-right: 10rpx;
 }
-.w_left{
-  width: 240rpx;
+
+.w_right {
+  width: 70%;
+}
+
+.w_left {
+  width: 30%;
   height: 80rpx;
   background: #30c37d;
   text-align: center;
@@ -82,8 +101,32 @@
   border-radius: 10rpx;
   letter-spacing: 4rpx;
   margin-right: 40rpx;
+  margin-left: 40rpx;
 }
-.upBtn{
+
+.upBtn {
   color: #fff;
   font-size: 34rpx;
+}
+
+/*正常  */
+
+.nomal {
+  color: #30c37d;
+}
+
+/*迟到  */
+
+.late {
+  color: #f03744;
+}
+
+/*外勤  */
+
+.warn {
+  color: steelblue;
+}
+/*还没有点击打卡时的样式  */
+.noCls{
+  color: #777;
 }

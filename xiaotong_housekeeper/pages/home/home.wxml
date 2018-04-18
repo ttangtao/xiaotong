@@ -120,7 +120,7 @@
 <view class='work'>
   <!--上班  -->
   <view class='work_all'>
-    <view class='w_left'>
+    <view bindtap='clockBtn' data-kind='up' class='w_left'>
       <text class='upBtn'>上班</text>
     </view>
     <view class='w_right'>
@@ -129,7 +129,7 @@
           <image src='../img/time_fill.png'></image>
         </view>
         <view>
-          <text>08:30</text>
+          <text class='{{test_statu?test_statu:"noCls"}}'>{{upTime_sure?upTime_sure:upWork_time}}</text>
         </view>
       </view>
       <view class='w_right_bottom'>
@@ -137,14 +137,14 @@
           <image src='../img/coordinates_fill.png'></image>
         </view>
         <view>
-          <text>成都市高新区复城国际T4</text>
+          <text class='{{test_statu?test_statu:"noCls"}}'>{{upAddress}}</text>
         </view>
       </view>
     </view>
   </view>
   <!--下班  -->
   <view class='work_all'>
-    <view class='w_left'>
+    <view bindtap='clockBtn' data-kind='down' class='w_left'>
       <text class='upBtn'>下班</text>
     </view>
     <view class='w_right'>
@@ -153,7 +153,7 @@
           <image src='../img/time_fill.png'></image>
         </view>
         <view>
-          <text>08:30</text>
+          <text class='{{test_statu?test_statu:"noCls"}}'>{{downTime_sure?downTime_sure:downWork_time}}</text>
         </view>
       </view>
       <view class='w_right_bottom'>
@@ -161,7 +161,7 @@
           <image src='../img/coordinates_fill.png'></image>
         </view>
         <view>
-          <text>成都市高新区复城国际T4</text>
+          <text class='{{test_statu?test_statu:"noCls"}}'>{{downAddress}}</text>
         </view>
       </view>
     </view>

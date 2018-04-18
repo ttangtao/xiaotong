@@ -15,6 +15,10 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const formatHours = (date = new Date) => {
+  return date.toTimeString().split(' ')[0]
+}
+
 const formatWeek = (date = new Date) => {
   let str = "";
   switch (date.getDay()) {
@@ -46,5 +50,6 @@ const formatWeek = (date = new Date) => {
 module.exports = {
   formatTime,
   formatNumber,
-  formatWeek
+  formatWeek,
+  formatHours
 }
