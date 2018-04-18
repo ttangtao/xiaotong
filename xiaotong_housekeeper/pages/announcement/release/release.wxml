@@ -1,13 +1,23 @@
 <!--pages/announcement/release/release.wxml-->
-<view class="wrap">
-    <input class='border' placeholder="请输入公告标题" auto-focus/>
-    <textarea class='border' name="evaContent" maxlength='999'  value="{{evaContent}}" placeholder="请输入公告详情"bindblur="charChange"/> 
-    <view class='sendWrap' bindtap='toSelect'>
-      <text>发送范围</text>
-      <view class='iconWrap'>
-        <text>0人</text>
-        <image src='../../img/right.png' class='icon'></image>
-      </view>
+<view class='row'>
+  <input class='inputCls' placeholder-class='placeCls' placeholder="请输入公告标题" auto-focus/>
+</view>
+
+<view class='row'>
+  <textarea class='inputCls' placeholder-class='placeCls' name="evaContent" maxlength='999' value="{{evaContent}}" placeholder="请输入公告详情" bindblur="charChange" />
+</view>
+
+<view class='row flex' style='justify-content: space-between' bindtap='toSelect'>
+  <text>发送范围</text>
+  <view class='flex'>
+    <view>
+      <text>0人</text>
     </view>
-    <view class='btnWarp_lp'><button class="weui-btn btn_lp" type="primary">发公告</button></view>
+    <view class='icon2'>
+      <image src='../../img/right.png'></image>
+    </view>
+  </view>
+</view>
+<view>
+  <button bindtap='jump' class="ptButton otherCls" hover-class='ptButtonHover'>发公告</button>
 </view>

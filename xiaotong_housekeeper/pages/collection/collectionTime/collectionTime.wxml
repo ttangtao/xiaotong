@@ -1,0 +1,32 @@
+<!--pages/collection/collectionTime/collectionTime.wxml-->
+<view style='height:220rpx;position:relative'>
+  <view class='picCls'><image src='../../img/emoji_fill.png'></image></view>
+</view>
+
+<view style='position:relative'>
+  <view class='positionCls'></view>
+  <view wx:for="{{6}}" wx:key="{{index}}" class='time_row flex'>
+    <view>
+      <view>
+        <text class='fontCls1'>06-28</text>
+      </view>
+      <view style='float:right'>
+        <text class='fontCls2'>10:36</text>
+      </view>
+    </view>
+    <view class='flex'>
+      <view class='headerCls'>
+        <image></image>
+      </view>
+      <view>
+        <text>马化腾</text>
+      </view>
+    </view>
+    <view class='icon2 otherOptions'>
+      <image src='../../img/ok-sign.png'></image>
+    </view>
+    <view>
+      <text>代收款</text>
+    </view>
+  </view>
+</view>

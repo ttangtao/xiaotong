@@ -1,0 +1,29 @@
+<!--pages/ProjectInformation/cooperationCompany/cooperationCompany.wxml-->
+<view class='row flex'>
+  <text>合作企业名称</text>
+  <text></text>
+</view>
+<view class='row flex'>
+  <text>税号</text>
+  <text></text>
+</view>
+<view class='row flex'>
+  <text>营业地址</text>
+  <text></text>
+</view>
+<view class='row flex'>
+  <text>固定电话</text>
+  <text></text>
+</view>
+<view class='row flex'>
+  <text>开户行</text>
+  <text></text>
+</view>
+<view class='row flex'>
+  <text>银行账号</text>
+  <text></text>
+</view>
+<view class='row flex'>
+  <text>开户地</text>
+  <text></text>
+</view>

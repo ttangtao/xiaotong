@@ -1,6 +1,7 @@
 // pages/home/home.js
 const app_global = getApp().globalData;
 const { formatTime } = require("../../utils/util.js")
+import common from "../../utils/common.js"
 
 Page({
 
@@ -10,11 +11,35 @@ Page({
   data: {
 
   },
-
+  // 跳转按钮
+  jump(e) {
+    let kind = e.currentTarget.dataset.kind;
+    let url = '';
+    switch (kind) {
+      case 'notice':
+        url = '../announcement/announcement'
+        break;
+      case 'work':
+        url = '../todoWork/todoWork'
+        break;
+      case 'apply':
+        url = '../myApply/myApply'
+        break;
+      default:
+        break;
+    }
+    if (url) {
+      wx.navigateTo({
+        url: url
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+
     console.log(app_global)
     //获取到全局的时间和星期
     this.setData({
@@ -22,13 +47,16 @@ Page({
       week: app_global.week,
       userInfo: app_global.userInfo,
     })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    setTimeout(()=>{
+      console.log(common._getLocation())
+    },2000)
   },
 
   /**

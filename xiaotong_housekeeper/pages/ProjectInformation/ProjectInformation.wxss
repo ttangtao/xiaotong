@@ -13,7 +13,8 @@ page{
   position: relative;  
   flex: auto;  
   text-align: center;  
-  line-height: 80rpx;  
+  padding-bottom: 20rpx;
+  /* line-height: 80rpx;   */
   /* margin:0 30rpx; */
 }  
 .navbar .item.active{  
@@ -103,4 +104,13 @@ page{
 }
 .pro_title{
   padding: 10rpx;
+}
+.areaCls{
+  background: #fff;
+  width: 95%;
+  height: 250rpx;
+  font-size: 32rpx;
+  color: #555;
+  border: 1rpx solid #ccc;
+  margin: 20rpx auto;
 }

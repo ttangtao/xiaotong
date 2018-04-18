@@ -87,10 +87,12 @@ image {
 .qz_box_text{
   margin-bottom: 10rpx;
   /* color: #777; */
-  font-size: 30rpx;
   text-align: center;
   margin-top: 10rpx;
   color: #83AF9B;
+}
+.qz_box_text>text{
+  font-size: 28rpx;
 }
 
 /* 按钮 */

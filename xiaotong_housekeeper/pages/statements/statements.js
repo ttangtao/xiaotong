@@ -11,12 +11,12 @@ Page({
   },
   jump() {
     wx.navigateTo({
-      url: '../ProjectInformation/ProductionDetails/ProductionDetails',
+      url: './statementsInfo/statementsInfo',
     })
   },
   addBtn(){
     wx.navigateTo({
-      url: '../ProjectInformation/ProductionDetails/ProductionDetails',
+      url: './addNewStatements/addNewStatements',
     })
   },
   /**

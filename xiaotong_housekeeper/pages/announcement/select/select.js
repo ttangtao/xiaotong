@@ -96,6 +96,12 @@ Page({
       inputVal: e.detail.value
     });
   },
+  // 跳转具体的人员
+  jump(){
+    wx.navigateTo({
+      url: '../sselect/sselect',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

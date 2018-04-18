@@ -18,9 +18,7 @@ Page({
     //财务列表
     financialList: [
       { title: '应收款跟踪', src: '../img/genzhong.png' },
-      { title: '应付款跟踪', src: '../img/genzhong.png' },
-      { title: '报销审批', src: '../img/approval3.png' },
-      { title: '付款审批', src: '../img/approval3.png' }
+      { title: '应付款跟踪', src: '../img/genzhong.png' }
     ],
     //人事模块
     personneList: [
@@ -32,12 +30,7 @@ Page({
       { title: '产值填报', src: '../img/fillValue.png' },
       { title: '订单跟踪', src: '../img/genzhong.png' },
       { title: '外包产值填报', src: '../img/OutsourcingProduction.png' },
-      { title: '结算单跟踪', src: '../img/genzhong.png' },
-      { title: '报销审批', src: '../img/approval.png' },
-      { title: '工时审批', src: '../img/approval.png' },
-      { title: '用车审批', src: '../img/approval.png' },
-      { title: '请假审批', src: '../img/approval.png' },
-      { title: '加班审批', src: '../img/approval.png' }
+      { title: '结算单跟踪', src: '../img/genzhong.png' }
     ],
     //移动办公
     MobileOffice: [
@@ -48,7 +41,9 @@ Page({
       { title: '通讯录', src: '../img/addressBook.png' },
       { title: '拜访', src: '../img/visit.png' },
       { title: '面试', src: '../img/interview.png' },
-      { title: '离职', src: '../img/departure.png' }
+      { title: '离职', src: '../img/departure.png' },
+      { title: '采购', src: '../img/procurement.png' },
+      { title: '审批', src: '../img/approval.png' }
     ]
   },
   // 跳转页面
@@ -56,6 +51,15 @@ Page({
     let kind = e.currentTarget.dataset.kind;
     let url = '';
     switch (kind) {
+      case "应收款跟踪":
+        url = "../collection/collection?id=应收款跟踪";
+        break;
+      case "应付款跟踪":
+        url = "../collection/collection?id=应付款跟踪";
+        break;
+      case "projectBtn":
+        url = "../ProjectInformation/ProjectInformation";
+        break;
       case "请假":
         url = "../askLeave/askLeave";
         break;
@@ -80,6 +84,12 @@ Page({
       case "离职":
         url = "../visit/ExternalContact/newEx_record/newEx_record?id="+'离职';
         break;
+      case "采购":
+        url = "../procurement/procurement";
+        break;
+      case "审批":
+        url = "../approvalCenter/approvalCenter";
+        break;
       default:
         break;
     }
@@ -89,7 +99,6 @@ Page({
         url: url,
       })
     }
-    
   },
   /**
    * 生命周期函数--监听页面加载

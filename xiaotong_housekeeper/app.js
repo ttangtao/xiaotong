@@ -55,6 +55,11 @@ App({
   },
   globalData: {
     userInfo: null,
+    //在公司的个人信息
+    companyInfo:{
+      position:'manager',//经理
+      // position:'ordinary',//普通员工
+    },
     //获取当前时间并设为全局变量
     time: formatTime(),
     //星期几

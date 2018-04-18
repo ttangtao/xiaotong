@@ -1,0 +1,16 @@
+/* pages/collection/collection.wxss */
+@import '../todoWork/todoWork.wxss';
+.zz_row{
+  display: flex;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.zz_info{
+  flex-grow: 1;
+  margin-left: 20rpx;
+}
+.zz_info>view{
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,10 @@
+/* pages/ProjectInformation/cooperationCompany/cooperationCompany.wxss */
+.row{
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+}
+.row:nth-child(1){
+  border-top: 1rpx solid #ccc;
+}

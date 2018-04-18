@@ -1,135 +1,116 @@
-<!--导航条-->
+<!-- 导航条 -->
 <view class="navbar">
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">
+    {{item}}
+  </text>
 </view>
-<!--项目信息-->
+<!-- 项目信息 -->
 <view hidden="{{currentTab!==0}}">
-  <!--员工  -->
-  <view wx:if="{{who=='员工'}}">
-    <view bindtap='gotoInfoBtn' class='proInfo_row flex'>
-      <text>客户名称</text>
-      <view class='flex'>
-        <view>
-          <text>xxx公司</text>
-        </view>
-        <view class='rightIcon'>
-          <image src='../img/right.png'></image>
-        </view>
+  <!-- //上面部分 -->
+  <view wx:for="{{fillList}}" wx:key="{{index}}" data-kind="{{item.key}}" bindtap="jump" class="proInfo_row flex">
+    <text>{{item.key}}</text>
+    <view class="flex">
+      <view>
+        <text>{{item.value}}</text>
       </view>
-    </view>
-    <view class='proInfo_row flex'>
-      <text>项目名称</text>
-      <text>xxx项目</text>
-    </view>
-    <view class='proInfo_row flex'>
-      <text>立项日期</text>
-      <text>2018年1月1日</text>
+      <view wx:if="{{item.src}}" class="icon2">
+        <image src="{{item.src}}"></image>
+      </view>
     </view>
   </view>
-  <!--经理  -->
-  <view wx:elif="{{who=='经理'}}">
-    <view wx:for="{{managerList}}"  wx:key="{{index}}"  data-kind='{{item.key}}' bindtap='jump' class='proInfo_row flex'>
-      <text>{{item.key}}</text>
-      <view class='flex'>
-        <view>
-          <text>{{item.value}}</text>
-        </view>
-        <view wx:if="{{item.src}}" class='icon2'>
-          <image src='{{item.src}}'></image>
-        </view>
+  <!-- 项目进度部分（经理看） -->
+  <view wx:if="{{position === 'manager'}}">
+    <view class="pro_title flex">
+      <view class="icon1">
+        <image src="../img/start2.png"></image>
       </view>
-    </view>
-
-    <view class='pro_title flex'>
-      <view class='icon1'>
-        <image src='../img/start2.png'></image>
-      </view>
-      <view style='margin-left:10rpx'>
+      <view style="margin-left:10rpx">
         <text>项目进度</text>
       </view>
     </view>
-    <view wx:for="{{managerProSchedule}}"  bindtap='jump'  wx:key="{{index}}" data-kind='{{item.key}}' class='proInfo_row flex'>
+    <view wx:for="{{managerProSchedule}}" bindtap="jump" wx:key="{{index}}" data-kind="{{item.key}}" class="proInfo_row flex">
       <text>{{item.key}}</text>
-      <view class='flex'>
+      <view class="flex">
         <view>
           <text>{{item.value}}</text>
         </view>
-        <view wx:if="{{item.src}}" class='icon2'>
-          <image src='{{item.src}}'></image>
+        <view wx:if="{{item.src}}" class="icon2">
+          <image src="{{item.src}}"></image>
         </view>
       </view>
     </view>
-  </view>
-  <view style='height:40rpx'></view>
-</view>
 
-<!--团队成员-->
+  </view>
+
+  <view>
+    <textarea placeholder='项目描述...' disabled value='{{areaValue}}' class='areaCls'></textarea>
+  </view>
+  <view style="height:40rpx"></view>
+</view>
+<!-- 团队成员 -->
 <view hidden="{{currentTab!==1}}">
-  <view wx:for="{{5}}" wx:key="{{index}}" class='timeMenRow flex'>
-    <view class='teamRow_headPic'>
+  <view wx:for="{{5}}" wx:key="{{index}}" data-kind='menberInfo' bindtap='jump' class="timeMenRow flex weui-check__label">
+    <view class="teamRow_headPic">
       <image></image>
     </view>
-    <view class='teamRow_info'>
-      <view class='teamRow_info_top'>
+    <view class="teamRow_info">
+      <view class="teamRow_info_top">
         <text>唐涛</text>
       </view>
-      <view class='teamRow_info_bottom'>
-        <text style='margin-right:10rpx;'>项目经历</text>
+      <view class="teamRow_info_bottom">
+        <text style="margin-right:10rpx;">项目经历</text>
         <text>四川</text>
         <text>成都</text>
       </view>
     </view>
-    <view class='teamRow_right'>
-      <image src='../img/right.png'></image>
+    <view class="teamRow_right">
+      <image src="../img/right.png"></image>
     </view>
   </view>
 </view>
-
-<!--排行榜-->
+<!-- 排行榜 -->
 <view hidden="{{currentTab!==2}}">
-
-  <view class='rankHead flex'>
-    <view class='rankPick flex'>
+  <view class="rankHead flex">
+    <view class="rankPick flex">
       <view class="section__title">日期</view>
       <picker mode="date" value="{{rankDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
         <view class="picker flex">
           <view>
             <text>{{rankDate}}</text>
           </view>
-          <view class='rankIcon'>
-            <image src='../img/bottom.png'></image>
+          <view class="rankIcon">
+            <image src="../img/bottom.png"></image>
           </view>
         </view>
       </picker>
     </view>
-    <view class='rankPick flex'>
+    <view class="rankPick flex">
       <view class="section__title">类型</view>
       <picker value="{{rankType}}" range="{{rankTypeAry}}" bindchange="bindTypeChange">
         <view class="picker flex">
           <view>
             <text>{{rankType}}</text>
           </view>
-          <view class='rankIcon'>
-            <image src='../img/bottom.png'></image>
+          <view class="rankIcon">
+            <image src="../img/bottom.png"></image>
           </view>
         </view>
       </picker>
     </view>
   </view>
-
-  <view wx:for="{{5}}" wx:key="{{index}}" class='rankRow flex'>
+  <view wx:for="{{5}}" wx:key="{{index}}" class="rankRow flex">
     <view>
       <text>{{index+1}}</text>
     </view>
-    <view class='flex'>
-      <view class='rankHeadPic'>
+    <view class="flex">
+      <view class="rankHeadPic">
         <image></image>
       </view>
       <view>马云</view>
     </view>
     <view>
       <text>10.12</text>
-      <text style='font-size:28rpx;margin-left:10rpx'>小时</text>
+      <text style="font-size:28rpx;margin-left:10rpx">小时</text>
     </view>
   </view>
 </view>

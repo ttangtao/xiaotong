@@ -27,7 +27,7 @@
 </view>
 
 <!-- //通告 -->
-<view class='box'>
+<view bindtap='jump' data-kind='notice' class='box'>
   <view class='box_top'>
     <view class='b_top_left'>
       <view class='icon'>
@@ -37,7 +37,7 @@
         <text>公告通知</text>
       </view>
     </view>
-    <view class='allBtn'>
+    <view catchtap='jump' data-kind='notice' class='allBtn'>
       <text>全部</text>
     </view>
   </view>
@@ -57,17 +57,17 @@
 </view>
 
 <!-- //工作 -->
-<view class='box'>
+<view  bindtap='jump' data-kind='work'  class='box'>
   <view class='box_top'>
     <view class='b_top_left'>
       <view class='icon'>
         <image src='../img/createtask_fill.png'></image>
       </view>
       <view>
-        <text>代办工作</text>
+        <text>待办工作</text>
       </view>
     </view>
-    <view class='allBtn'>
+    <view  catchtap='jump' data-kind='work'  class='allBtn'>
       <text>全部</text>
     </view>
   </view>
@@ -87,7 +87,7 @@
 </view>
 
 <!-- //申请 -->
-<view class='box'>
+<view  bindtap='jump' data-kind='apply'  class='box'>
   <view class='box_top'>
     <view class='b_top_left'>
       <view class='icon'>
@@ -97,7 +97,7 @@
         <text>我的申请</text>
       </view>
     </view>
-    <view class='allBtn'>
+    <view  catchtap='jump' data-kind='apply'  class='allBtn'>
       <text>全部</text>
     </view>
   </view>

@@ -1,0 +1,17 @@
+<!--pages/ProjectInformation/contractDetails/contractDetails.wxml-->
+<view wx:for="{{fillList}}" wx:key="{{index}}" class='row flex weui-check__label'>
+  <view>
+    <text>{{item.key}}</text>
+  </view>
+  <view class='flex'>
+    <view wx:if="{{item.value}}">
+      <text>{{item.value}}</text>
+    </view>
+    <view class='icon2' wx:if="{{item.src}}">
+      <image src='{{item.src}}'></image>
+    </view>
+  </view>
+</view>
+<view><textarea placeholder='合同描述...' disabled value='{{areaValue}}' class='areaCls'></textarea></view>
+
+<view style='height:40rpx'></view>

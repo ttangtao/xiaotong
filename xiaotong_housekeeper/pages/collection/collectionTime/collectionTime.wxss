@@ -1,0 +1,58 @@
+/* pages/collection/collectionTime/collectionTime.wxss */
+
+.time_row {
+  position: relative;
+  padding-left: 60rpx;
+  padding-right: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.time_row>view:nth-child(2) {
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-right: 50rpx;
+}
+
+.time_row>view:last-child {
+  width: 100rpx;
+}
+
+.fontCls1 {
+  font-size: 42rpx;
+}
+
+.fontCls2 {
+  font-size: 30rpx;
+}
+
+.headerCls {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: #30c37d;
+  margin-right: 10rpx;
+}
+
+.otherOptions {
+  position: absolute;
+  top: 33%;
+  left: 31%;
+  z-index: 99;
+}
+
+.positionCls {
+  position: absolute;
+  top: 0;
+  left: 34%;
+  z-index: -99;
+  height: 100%;
+  border-left: 1rpx solid #30c37d;
+}
+.picCls{
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  top: 24%;
+  left: 21%;
+}

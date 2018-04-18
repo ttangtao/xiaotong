@@ -13,7 +13,6 @@
   align-self: flex-start;
 }
 .rankHead{
-  margin: 30rpx 0;
   background: #f5f5f5;
 }
 .rankPick {

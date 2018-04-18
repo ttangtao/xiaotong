@@ -16,8 +16,9 @@
   padding-top: 15rpx;
 }
 .number {
-  padding-right: 40rpx;
-  color: #3f51b5;
+  padding-right: 20rpx;
+  text-decoration: underline;
+  color: #30c37d;
 }
 .who_date {
   padding-bottom: 30rpx;

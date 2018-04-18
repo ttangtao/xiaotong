@@ -1,35 +1,25 @@
-  /* pages/announcement/release/release.wxss  */
-.border {
-  border: 1px solid #ccc;
-  padding:10rpx 14rpx;
-  width: 90%; 
+.row{
+  background: #fff;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
   margin-bottom: 20rpx;
 }
-.wrap {
-  margin-top: 20rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.row:first-child{
+  border-top: 1rpx solid #ccc;
 }
-.icon {
-  width: 34rpx;
-  height:40rpx;
-}
-.sendWrap {
-  display: flex;
-  width: 94%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.iconWrap {
-  display: flex;
-  flex-direction:row;
-  align-items: center; 
-} 
-.btnWarp_lp{
-  position: fixed;
-  bottom: 0rpx;
-  width: 100%;
-  border-radius: 0;
+ .placeCls{
+   font-size: 28rpx;
+   color: #777;
+ }
+ .inputCls{
+   width: 97%;
+   margin: auto;
+   padding: 10rpx;
+   border: 1rpx solid #ccc;
+ }
+ .otherCls{
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   border-radius: 0;
  }

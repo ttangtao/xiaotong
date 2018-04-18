@@ -6,9 +6,16 @@ Page({
   data: {
 
   },
+  // 选择范围的跳转
   toSelect() {
     wx.navigateTo({
       url: '/pages/announcement/select/select',
+    })
+  },
+  //发送公告
+  jump() {
+    wx.navigateBack({
+      delta: 1
     })
   },
   /**

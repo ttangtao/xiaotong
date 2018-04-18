@@ -1,0 +1,175 @@
+<!-- pages/askLeave/askLeave.wxml -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{projectBelongs==='请选择'}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>归属项目</text>
+    </view>
+  </view>
+  <view class="flex">
+    <picker data-kind="projectBelongs" bindchange="bindPickerChange" value="{{projectBelongs}}" range="{{projectBelongsAry}}">
+      <view class="flex">
+        <view class="picker">{{projectBelongs}}</view>
+        <view class="icon2">
+          <image src="../img/right.png"></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="askTishi flex">
+  <text>本月已申请{{sqDays}}元</text>
+  <text>我的采购</text>
+</view>
+<!-- 采购类型 -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{procurementType==='请选择'}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>采购类型</text>
+    </view>
+  </view>
+  <view class="flex">
+    <picker data-kind="procurementType" bindchange="bindPickerChange" value="{{procurementType}}" range="{{procurementTypeAry}}">
+      <view class="flex">
+        <view class="picker">{{procurementType}}</view>
+        <view class="icon2">
+          <image src="../img/right.png"></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+</view>
+<!-- 采购名称 -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{procurementName===''}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>采购名称</text>
+    </view>
+  </view>
+  <view class="inputCls">
+    <input data-kind="procurementName" confirm-type="next" bindinput="bindInput" placeholder="请输入" value="{{procurementName}}"></input>
+  </view>
+</view>
+<!-- 采购规格 -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{procurementSpe===''}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>采购规格</text>
+    </view>
+  </view>
+  <view class="inputCls">
+    <input data-kind="procurementSpe" confirm-type="next" bindinput="bindInput" placeholder="请输入" value="{{procurementSpe}}"></input>
+  </view>
+</view>
+<!-- 采购数量 -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{procurementNum===''}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>采购数量</text>
+    </view>
+  </view>
+  <view class="inputCls">
+    <input data-kind="procurementNum" type="number" confirm-type="next" bindinput="bindInput" placeholder="请输入" value="{{procurementNum}}"></input>
+  </view>
+</view>
+<!-- 采购单位 -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{procurementCom===''}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>采购单位</text>
+    </view>
+  </view>
+  <view class="inputCls">
+    <input data-kind="procurementCom" bindinput="bindInput" confirm-type='next' placeholder="请输入" value="{{procurementCom}}"></input>
+  </view>
+</view>
+<!-- 采购价格 -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{procurementPri===''}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>采购价格</text>
+    </view>
+  </view>
+  <view class="inputCls">
+    <input data-kind="procurementPri" type='number' confirm-type='next' bindinput="bindInput" placeholder="请输入" value="{{procurementPri}}"></input>
+  </view>
+</view>
+<!-- 采购金额 -->
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{money===''}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>采购金额</text>
+    </view>
+  </view>
+  <view>
+    <text>{{money}}</text>
+  </view>
+</view>
+<view class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{reason===''}}" src="../img/start.png"></image>
+      <image wx:else src="../img/start2.png"></image>
+    </view>
+    <view class="row_text">
+      <text>事由</text>
+    </view>
+  </view>
+</view>
+<view class="reasonBox">
+  <view class="reason">
+    <textarea auto-height placeholder="这里填写事由" bindinput="bindInput" data-kind="area" value="{{reason}}"></textarea>
+  </view>
+</view>
+<view bindtap="uploadPic" class="askL_row flex">
+  <view class="flex">
+    <view class="icon1">
+      <image wx:if="{{uploadSrc}}" src="../img/start2.png"></image>
+      <image wx:else src="../img/start.png"></image>
+    </view>
+    <view class="row_text">
+      <text>图片</text>
+    </view>
+  </view>
+  <view class="icon2">
+    <image src="../img/add.png"></image>
+  </view>
+</view>
+<view wx:if="{{uploadSrc}}" class="uploadPic">
+  <image src="{{uploadSrc}}"></image>
+</view>
+<view style="height:150rpx"></view>
+<view>
+  <button bindtap="saveBtn" class="ptButton otherButtonCls" hover-class="ptButtonHover">提交</button>
+</view>

@@ -122,7 +122,7 @@
   <view class='qz_title'>
     <text>我的项目</text>
   </view>
-  <view wx:for="{{5}}" wx:key="{{index}}" class='pro_contanier'>
+  <view wx:for="{{2}}" wx:key="{{index}}" data-kind="projectBtn" bindtap="jump" class='pro_contanier weui-check__label'>
     <view class='image_cls'>
       <image src='../img/project.png'></image>
     </view>

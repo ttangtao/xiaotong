@@ -4,11 +4,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 100rpx;
 }
 .tab {
-  line-height: 100rpx;
   margin: auto;
+  padding: 20rpx 0;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -37,7 +36,7 @@
   flex-direction: row;
   padding: 30rpx 40rpx;
   border-bottom: 1px solid #ccc;
-  font-size: 30rpx;
+  background: #fff;
 }
 .contentWrap {
   margin-left: 20rpx;

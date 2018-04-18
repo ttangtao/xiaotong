@@ -1,0 +1,61 @@
+<view class='flex otherWDB'>
+  <view>
+    <text style='font-size:46rpx;color:#BA2835'>待开票</text>
+  </view>
+  <view style='line-height:30rpx'>
+    <button size='mini' bindtap='jump' class='ptButton'>开票</button>
+  </view>
+</view>
+
+<view style='padding:10rpx;' class='flex'>
+  <view class='icon1'>
+    <image src='../../img/start2.png'></image>
+  </view>
+  <view style='margin-left:10rpx;'>
+    <text>订单详情</text>
+  </view>
+</view>
+
+<view wx:for="{{fillList}}" wx:key="{{index}}" class='flex otherOptions'>
+  <view>
+    <text>{{item.key}}</text>
+  </view>
+  <view class='flex'>
+    <view>
+      <text>{{item.value}}</text>
+    </view>
+    <view wx:if="{{item.src}}" class='icon2'>
+      <image src='{{item.src}}'></image>
+    </view>
+  </view>
+</view>
+
+<view style='padding:10rpx;' class='flex'>
+  <view class='icon1'>
+    <image src='../../img/start2.png'></image>
+  </view>
+  <view style='margin-left:10rpx;'>
+    <text>应收款信息</text>
+  </view>
+</view>
+
+<view>
+  <view wx:for="{{row2List}}" wx:key="{{index}}" class='flex otherOptions'>
+    <view>
+      <text>{{item.key}}</text>
+    </view>
+    <view class='flex'>
+      <view>
+        <text>{{item.value}}</text>
+      </view>
+      <view wx:if="{{item.src}}" class='icon2'>
+        <image src='{{item.src}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style='height:140rpx'></view>
+
+<button bindtap='jump' class='ptButton ontherButtonCls' hover-class='ptButtonHover'>
+  查看应收款时间轴</button>

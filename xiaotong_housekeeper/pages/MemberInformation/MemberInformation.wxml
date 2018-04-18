@@ -87,3 +87,5 @@
     <text>{{item.value}}</text>
   </view>
 </view>
+
+<view style='height:80rpx'></view>

@@ -3,17 +3,20 @@
         <view class="weui-tab">
             <view class="weui-navbar navbar_lp">
                 <view id="1" class="weui-navbar__item {{activeIndex == 1 ? 'weui-bar__item_on' : ''}}" bindtap="tabClick1">
-                    <view class="weui-navbar__title">未读（10）</view>
+                    <view class="weui-navbar__title"><text>未读(10)</text></view>
                 </view>
                 <view id="2" class="weui-navbar__item {{activeIndex == 2 ? 'weui-bar__item_on' : ''}}" bindtap="tabClick2">
-                    <view class="weui-navbar__title">已读（999）</view>
+                    <view class="weui-navbar__title"><text>已读(99)</text></view>
                 </view>
                 <view id="3" class="weui-navbar__item {{activeIndex == 3 ? 'weui-bar__item_on' : ''}}" bindtap="tabClick3">
-                    <view class="weui-navbar__title">我发布的（6）</view>
+                    <view class="weui-navbar__title"><text>我发布的(6)</text></view>
                 </view>
                  <view class="weui-navbar__slider sider_lp" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> 
             </view>
+
+
             <view class="weui-tab__panel">
+
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                   <view class='rankWrap'>
                     <view wx:for="{{list}}" wx:key="{{index}}" class="itemWrap" bindtap='toDetail'>
@@ -30,11 +33,12 @@
                     </view>
                   </view>
                 </view>
+
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
                   <view class='rankWrap'>
                     <view wx:for="{{list}}" wx:key="{{index}}" class="itemWrap" bindtap='toDetail'>
                       <view class='messageIcon'>
-                        <image src='../img/message.png' class='message'></image>
+                        <image src='../img/messaged.png' class='message'></image>
                       </view>
                       <view class='contentWrap'>
                         <text class='title'>{{item.title}}</text>
@@ -46,11 +50,12 @@
                     </view>
                   </view>
                 </view>
+
                 <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
                   <view class='rankWrap mine_lp'>
                     <view wx:for="{{list2}}" wx:key="{{index}}" class="itemWrap" bindtap='toDetail'>
                       <view class='messageIcon'>
-                        <image src='../img/message.png' class='message'></image>
+                        <image src='../img/release.png' class='message'></image>
                       </view>
                       <view class='contentWrap'>
                         <text class='title'>{{item.title}}</text>

@@ -6,6 +6,7 @@
   height: 220rpx;
   border-bottom: 1px solid #ccc;
   font-size: 30rpx;
+  background: #fff;
 }
 .title {
   font-size: 36rpx;

@@ -120,3 +120,7 @@ page,
   height: 100rpx!important;
   border-bottom: 1px solid #ccc;
 }
+.weui-search-bar__cancel-btn{
+  font-size: 30rpx;
+  color: #30c37d
+}

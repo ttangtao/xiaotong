@@ -1,28 +1,42 @@
 // pages/IntegralManagement/IntegralManagement.js
-const app = getApp();
+const app_global = getApp().globalData;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    who: '经理',
+    position: 'ordinary',
     navbar: ['项目信息', '团队成员', '排行榜'],
     currentTab: 0,
     rankDate: '请选择',
     rankTypeAry: ['种类1', '种类2', '种类3'],
     rankType: '请选择',
+    fillList: [],
+    //项目描述
+    areaValue:'',
+    //普通员工渲染列表
+    ordinaryList: [
+      { key: '合作企业名称', value: 'xxx公司', src: '../img/right.png' },
+      { key: '合同名称', value: 'xxx公司', src: '' },
+      { key: '所属部门', value: 'xxx部门', src: '' },
+      { key: '项目经理', value: 'xxx', src: '../img/right.png' },
+      { key: '项目名称', value: 'xxx项目', src: '' },
+      { key: '立项日期', value: '2018-01-01', src: '' }
+    ],
     //经理渲染列表
     managerList: [
-      { key: '客户名称', value: 'xxx公司', src: '../img/right.png' },
+      { key: '合作企业名称', value: 'xxx公司', src: '../img/right.png' },
+      { key: '合同名称', value: 'xxx公司', src: '../img/right.png' },
+      { key: '所属部门', value: 'xxx部门', src: '../img/right.png' },
+      { key: '项目经理', value: 'xxx', src: '../img/right.png' },
       { key: '项目名称', value: 'xxx项目', src: '' },
-      { key: '立项日期', value: '2018-01-01', src: '' },
-      { key: '税率(%)', value: '6', src: '' },
-      { key: '含框架金额不含税(元)', value: '1000000', src: '' },
-      { key: '含框架金额含税(元)', value: '1000000', src: '' },
-      { key: '结算项', value: '', src: '../img/right.png' },
-      { key: '管理费率(%)', value: '5', src: '' },
+      { key: '框架金额不含税(元)', value: '1000000', src: '' },
+      { key: '框架金额含税(元)', value: '1000000', src: '' },
       { key: '利润指标(%)', value: '30', src: '' },
+      { key: '立项日期', value: '2018-01-01', src: '' },
+      { key: '结算项', value: '', src: '../img/right.png' }
     ],
     managerProSchedule: [
       { key: '产值填报', value: '', src: '../img/right.png' },
@@ -38,11 +52,23 @@ Page({
     })
   },
   // 切换其他页面
-  jump(e){
+  jump(e) {
     let kind = e.currentTarget.dataset.kind;
     console.log(kind)
-    switch (kind){
-      case "结算项":{
+    switch (kind) {
+      case "menberInfo": {
+        wx.navigateTo({
+          url: '../MemberInformation/MemberInformation',
+        })
+        break;
+      }
+      case "合作企业名称": {
+        wx.navigateTo({
+          url: './cooperationCompany/cooperationCompany',
+        })
+        break;
+      }
+      case "结算项": {
         wx.navigateTo({
           url: '../ClearingItem/ClearingItem',
         })
@@ -54,13 +80,61 @@ Page({
         })
         break;
       }
+      case "订单跟踪": {
+        wx.navigateTo({
+          url: '../order/order',
+        })
+        break;
+      }
+      case "外包产值填报": {
+        wx.navigateTo({
+          url: '../OutsourcingProduction/OutsourcingProduction',
+        })
+        break;
+      }
+      case "结算单跟踪": {
+        wx.navigateTo({
+          url: '../statements/statements',
+        })
+        break;
+      }
     }
-    
+
   },
   gotoInfoBtn() {
     wx.navigateTo({
       url: '../customerInformation/customerInformation',
     })
+  },
+  /**
+ * 生命周期函数--监听页面加载
+ */
+  onLoad: function (options) {
+    // 判断职位
+    this.setData({
+      position: app_global.companyInfo.position
+    })
+    let position = this.data.position;
+    switch (position) {
+      case 'manager': {
+        this.setData({
+          fillList: this.data.managerList
+        }); break;
+      }
+      case 'ordinary': {
+        this.setData({
+          fillList: this.data.ordinaryList
+        }); break;
+      }
+      default:
+        break;
+    }
+    if (this.data.position == '') {
+
+    }
+
+
+    console.log(app_global.companyInfo)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,0 +1,2 @@
+/* pages/collection/paymentInfo/paymentInfo.wxss */
+@import '../collectionInfo/collectionInfo.wxss'

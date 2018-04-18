@@ -1,0 +1,40 @@
+<!--pages/todoWork/todoWork.wxml-->
+<view>
+  <view class='header'>
+    <picker class='tab' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class='Intab'>
+        <text>类型</text>
+        <image class='icon' src='../img/bottom.png'></image>
+      </view>
+    </picker>
+    <picker class='tab tab2' mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class='Intab'>
+        <text>时间</text>
+        <image class='icon' src='../img/bottom.png'></image>
+      </view>
+    </picker>
+  </view>
+  <view>
+    <view wx:for="{{fillList}}" wx:key="{{index}}" class="zz_row weui-check__label" bindtap='toDetail'>
+      <view class='icon2'>
+        <image src='../img/genzhong.png'></image>
+      </view>
+      <view class='zz_info'>
+        <view>
+          <text>{{item.type}}</text>
+        </view>
+        <view>
+          <text>{{item.description}}</text>
+          <text>{{item.date}}</text>
+        </view>
+        <view>
+          <text>{{item.key1}}</text>
+          <text>{{item.key2}}</text>
+        </view>
+        <view>
+          <text>{{item.status}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

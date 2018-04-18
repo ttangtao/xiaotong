@@ -1,0 +1,2 @@
+/* pages/procurement/procurement.wxss */
+@import '../payment/payment';

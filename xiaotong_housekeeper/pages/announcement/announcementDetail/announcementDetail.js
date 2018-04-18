@@ -11,6 +11,12 @@ Page({
       url: '/pages/announcement/announcementDetail/announcementDetail',
     })
   },
+  // 跳转阅读记录
+  jump(){
+    wx.navigateTo({
+      url: '../readRecord/readRecord',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
