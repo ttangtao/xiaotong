@@ -23,8 +23,7 @@
   </view>
 
 </view>
-
-
+<view style='height:80rpx'></view>
 
 <view class='prompt'>
   <text>距离发工资还有</text>

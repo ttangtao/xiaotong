@@ -1,15 +1,15 @@
 <!--pages/identify/identify.wxml-->
 <view class='bj'>
   <view class='ide_box'>
-
+    <image src='{{uploadSrc}}'></image>
   </view>
 </view>
 
 <view class='upload'>
-  <view class='ide_icon'>
+  <view bindtap='uploadBtn' class='ide_icon'>
     <image src='../img/upload.png'></image>
   </view>
-  <view class='ide_text'>
+  <view bindtap='uploadBtn' class='ide_text'>
     <text>上传图片</text>
   </view>
 </view>

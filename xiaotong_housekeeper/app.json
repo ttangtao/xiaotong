@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/identify/identify",
     "pages/collection/collection",
     "pages/collection/paymentInfo/paymentInfo",
     "pages/collection/collectionTime/collectionTime",
@@ -78,36 +79,36 @@
     "pages/addNewWorkEx/addNewWorkEx",
     "pages/Work_ex/Work_ex",
     "pages/Project_ex/Project_ex",
-    "pages/identify/identify",
     "pages/addNewProEx/addNewProEx",
     "pages/QrCode/QrCode"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#30c37d",
     "navigationBarTitleText": "小通管家",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
-    "color": "#a9b7b7",
-    "selectedColor": "#11cd6e",
+    "backgroundColor": "#fff",
+    "color": "#8a8a8a",
+    "selectedColor": "#30c37d",
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "pages/img/a_home.png",
-        "iconPath": "pages/img/home.png",
+        "selectedIconPath": "pages/img/homepage_fill(3).png",
+        "iconPath": "pages/img/homepage(2).png",
         "pagePath": "pages/home/home",
         "text": "首页"
       },
       {
-        "selectedIconPath": "pages/img/a_workbench_fill.png",
-        "iconPath": "pages/img/workbench_fill.png",
+        "selectedIconPath": "pages/img/workbench_fill(3).png",
+        "iconPath": "pages/img/workbench(2).png",
         "pagePath": "pages/workbench/workbench",
         "text": "工作台"
       },
       {
-        "selectedIconPath": "pages/img/a_mine_fill.png",
-        "iconPath": "pages/img/mine_fill.png",
+        "selectedIconPath": "pages/img/mine_fill(3).png",
+        "iconPath": "pages/img/mine(2).png",
         "pagePath": "pages/my/my",
         "text": "我的"
       }

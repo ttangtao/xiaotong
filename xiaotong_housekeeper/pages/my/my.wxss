@@ -1,11 +1,13 @@
 /* pages/my/my.wxss */
 
 .my_head {
-  background-color: #fff;
-  margin: 20rpx;
+  background-color: #30c37d;
+  margin: 0 0 20rpx;
   padding: 20rpx;
 }
-
+.my_head text{
+  color:#fff!important;
+}
 .head_top {
   display: flex;
   justify-content: space-between;
@@ -36,7 +38,11 @@
   align-items: center;
   color: #777;
   font-size: 30rpx;
-  text-decoration: underline;
+
+}
+.edit>view:first-child{
+  border-bottom: 1rpx solid #fff;
+  padding-bottom: 1rpx;
 }
 
 .right {
@@ -51,8 +57,7 @@
   align-items: center;
   padding: 20rpx;
   background: #fff;
-  /* margin:20rpx 0; */
-  border-bottom: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ddd;
 }
 
 .left {

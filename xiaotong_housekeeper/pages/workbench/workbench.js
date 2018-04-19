@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo:null,
     //公司领导列表
     companyLeaderList: [
       { title: '应收账款', src: '../img/receiving.png' },
@@ -105,6 +106,7 @@ Page({
    */
   onLoad: function (options) {
     console.log(app_global)
+
     //获取到全局的时间和星期
     this.setData({
       time: app_global.time,

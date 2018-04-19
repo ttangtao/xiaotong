@@ -1,16 +1,14 @@
 /* pages/home/home.wxss */
 
-/*  */
-
 .box {
   font-size: 28rpx;
   margin: 20rpx;
-  border: 1rpx solid #ddd;
+  border: 1rpx solid #30c37d;
   border-radius: 6rpx;
-  padding: 20rpx;
+  padding: 2rpx 20rpx;
   background: #fff;
   color: #333;
-  box-shadow: 0rpx 4rpx 4rpx rgba(150, 150, 150, 0.2);
+  /* margin-bottom: 50rpx; */
 }
 
 .icon {
@@ -30,15 +28,16 @@
   align-items: center;
 }
 
-.allBtn {
-  color: steelblue;
-  text-decoration: underline;
+.allBtn>text {
   font-size: 24rpx;
+  color: #8cc7b5;
+  border-bottom: 1rpx solid #8cc7b5;
+  padding-bottom: 1rpx;
 }
 
 .box_bottom {
   padding: 20rpx 50rpx;
-  padding-bottom: 10rpx;
+  padding-bottom: 0;
 }
 
 .b_bottom_top {
@@ -60,17 +59,24 @@
 
 .work {
   background: #fff;
-  margin: 0 20rpx;
-  padding: 10rpx 0;
-  border: 1rpx solid #ddd;
+  /* margin: 0 20rpx;
+  padding: 10rpx 0; */
+  border: 1rpx solid #30c37d;
+  box-sizing: border-box;
   border-radius: 6rpx;
-  box-shadow: 0rpx 4rpx 4rpx rgba(150, 150, 150, 0.2);
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin: 0 20rpx;
+  /* box-shadow: 0rpx 4rpx 4rpx rgba(150, 150, 150, 0.2); */
 }
 
 .work_all {
   display: flex;
   align-items: center;
-  margin: 40rpx 0;
+  margin: 20rpx 0;
 }
 
 .w_right_top, .w_right_bottom {
@@ -78,15 +84,28 @@
   align-items: center;
   font-size: 26rpx;
 }
+.w_right_bottom>view:last-child{
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.w_right_top {
+  justify-content: space-between;
+  padding-right: 10rpx;
+}
 
 .icon2 {
-  width: 40rpx;
-  height: 40rpx;
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
   margin-right: 10rpx;
 }
 
 .w_right {
   width: 70%;
+  overflow: hidden;
 }
 
 .w_left {
@@ -113,20 +132,53 @@
 
 .nomal {
   color: #30c37d;
+  font-size: 28rpx;
 }
 
 /*迟到  */
 
 .late {
-  color: #f03744;
+  color: #f4606c;
+  font-size: 28rpx;
 }
 
 /*外勤  */
 
 .warn {
   color: steelblue;
+  font-size: 28rpx;
 }
+
 /*还没有点击打卡时的样式  */
-.noCls{
+
+.noCls {
   color: #777;
+  font-size: 28rpx;
+}
+
+.late_tag {
+  color: #f4606c;
+  font-size: 20rpx;
+  padding: 4rpx 6rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #f4606c;
+  margin: 0 4rpx;
+}
+
+.warn_tag {
+  color: steelblue;
+  font-size: 20rpx;
+  padding: 4rpx 6rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid steelblue;
+  margin: 0 4rpx;
+}
+
+.nomal_tag {
+  color: #30c37d;
+  font-size: 20rpx;
+  padding: 4rpx 6rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #30c37d;
+  margin: 0 4rpx;
 }

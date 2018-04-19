@@ -19,7 +19,7 @@
         <text>编辑资料</text>
       </view>
       <view class='right'>
-        <image src='../img/right.png'></image>
+        <image src='../img/right2.png'></image>
       </view>
     </view>
   </view>
