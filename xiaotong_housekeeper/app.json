@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/identify/identify",
+    "pages/ocr/ocr",
     "pages/collection/collection",
     "pages/collection/paymentInfo/paymentInfo",
     "pages/collection/collectionTime/collectionTime",

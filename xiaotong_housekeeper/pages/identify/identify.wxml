@@ -1,16 +1,16 @@
 <!--pages/identify/identify.wxml-->
-<view class='bj'>
+<!-- <view class='bj'>
   <view class='ide_box'>
-    <image src='{{uploadSrc}}'></image>
+
   </view>
-</view>
+</view> -->
 
 <view class='upload'>
   <view bindtap='uploadBtn' class='ide_icon'>
     <image src='../img/upload.png'></image>
   </view>
   <view bindtap='uploadBtn' class='ide_text'>
-    <text>上传图片</text>
+    <text>智能识别</text>
   </view>
 </view>
 
@@ -25,9 +25,29 @@
 
 <!--表单  -->
 <view>
-  <view wx:for="{{testData}}" wx:key="{{index}}" class='row'>
-    <text>{{item.key}}</text>
-    <text>{{item.value}}</text>
+  <view class='row'>
+    <text>姓名</text>
+    <text>{{ocrObj.name}}</text>
+  </view>
+  <view class='row'>
+    <text>性别</text>
+    <text>{{ocrObj.sex}}</text>
+  </view>
+  <view class='row'>
+    <text>名族</text>
+    <text>{{ocrObj.nation}}</text>
+  </view>
+  <view class='row'>
+    <text>出生日期</text>
+    <text>{{ocrObj.birth}}</text>
+  </view>
+  <view class='row'>
+    <text>证件号码</text>
+    <text>{{ocrObj.id}}</text>
+  </view>
+  <view class='row'>
+    <text>居住地</text>
+    <text>{{ocrObj.address}}</text>
   </view>
 </view>
 
